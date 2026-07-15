@@ -1,0 +1,545 @@
+/* ===================================================
+                ABOUT PAGE
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#ffffff;
+
+    color:#111827;
+
+    overflow-x:hidden;
+
+}
+
+/* ===================================================
+                COMMON SECTION
+=================================================== */
+
+section{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:120px auto;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-heading span{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:#ECFDF3;
+
+    color:#16A34A;
+
+    border-radius:999px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.section-heading h2{
+
+    font-size:52px;
+
+    line-height:1.2;
+
+    color:#111827;
+
+    margin-bottom:20px;
+
+}
+
+.section-heading p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#6B7280;
+
+}
+
+/* ===================================================
+                INTRO
+=================================================== */
+
+.about-intro{
+
+    text-align:center;
+
+}
+
+.about-intro p{
+
+    max-width:1000px;
+
+    margin:0 auto 25px;
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#6B7280;
+
+}
+
+/* ===================================================
+            WHAT MAKES US DIFFERENT
+=================================================== */
+
+.difference-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.difference-card{
+
+    padding:40px;
+
+    border-radius:24px;
+
+    background:#ffffff;
+
+    border:1px solid rgba(22,163,74,.08);
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+.difference-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 50px rgba(22,163,74,.12);
+
+}
+
+.difference-card h3{
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+    color:#111827;
+
+}
+
+.difference-card p{
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+}
+
+/* ===================================================
+                VALUES
+=================================================== */
+
+.values-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.value{
+
+    background:#F9FAFB;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.value:hover{
+
+    background:#16A34A;
+
+    color:#ffffff;
+
+    transform:translateY(-8px);
+
+}
+
+.value:hover p{
+
+    color:#ffffff;
+
+}
+
+.value h3{
+
+    margin-bottom:15px;
+
+    font-size:26px;
+
+}
+
+.value p{
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+}
+
+/* ===================================================
+                STATS
+=================================================== */
+
+.about-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat{
+
+    background:#16A34A;
+
+    color:#ffffff;
+
+    padding:45px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+}
+
+.stat h2{
+
+    font-size:50px;
+
+    margin-bottom:12px;
+
+}
+
+.stat p{
+
+    font-size:18px;
+
+}
+
+/* ===================================================
+                EXPLORE
+=================================================== */
+
+.explore-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.explore-card{
+
+    text-decoration:none;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    border:1px solid rgba(22,163,74,.08);
+
+    transition:.35s;
+
+    color:#111827;
+
+}
+
+.explore-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 55px rgba(22,163,74,.12);
+
+}
+
+.explore-card h3{
+
+    margin-bottom:18px;
+
+    font-size:28px;
+
+}
+
+.explore-card p{
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.explore-card span{
+
+    color:#16A34A;
+
+    font-weight:600;
+
+}
+
+/* ===================================================
+                CTA
+=================================================== */
+
+.about-cta{
+
+    background:linear-gradient(135deg,#16A34A,#22C55E);
+
+    color:#ffffff;
+
+    text-align:center;
+
+    border-radius:32px;
+
+    padding:90px 60px;
+
+}
+
+.about-cta h2{
+
+    font-size:52px;
+
+    margin-bottom:25px;
+
+}
+
+.about-cta p{
+
+    max-width:800px;
+
+    margin:auto auto 40px;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+.about-cta a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:240px;
+
+    height:60px;
+
+    background:#ffffff;
+
+    color:#16A34A;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.about-cta a:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ===================================================
+                TABLET
+=================================================== */
+
+@media(max-width:992px){
+
+    .difference-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .values-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .about-stats{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .explore-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ===================================================
+                MOBILE
+=================================================== */
+
+@media(max-width:768px){
+
+    section{
+
+        width:95%;
+
+        margin:90px auto;
+
+    }
+
+    .section-heading h2{
+
+        font-size:36px;
+
+    }
+
+    .section-heading p{
+
+        font-size:16px;
+
+    }
+
+    .about-intro p{
+
+        font-size:16px;
+
+    }
+
+    .values-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .about-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .explore-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .about-cta{
+
+        padding:60px 25px;
+
+    }
+
+    .about-cta h2{
+
+        font-size:34px;
+
+    }
+
+    .about-cta p{
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ===================================================
+            SMALL MOBILE
+=================================================== */
+
+@media(max-width:480px){
+
+    .section-heading h2{
+
+        font-size:30px;
+
+    }
+
+    .difference-card{
+
+        padding:28px;
+
+    }
+
+    .explore-card{
+
+        padding:30px;
+
+    }
+
+    .stat h2{
+
+        font-size:40px;
+
+    }
+
+}

@@ -1,0 +1,252 @@
+/* ===================================================
+                WHO WE ARE
+=================================================== */
+
+.who-we-are{
+
+    width:90%;
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+.who-content{
+
+    max-width:1000px;
+
+    margin:0 auto;
+
+}
+
+.who-content p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#6B7280;
+
+    margin-bottom:30px;
+
+    text-align:justify;
+
+}
+
+/* ===================================================
+                BELIEF SECTION
+=================================================== */
+
+.belief{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:120px auto;
+
+}
+
+.belief-box{
+
+    background:linear-gradient(135deg,#16A34A,#22C55E);
+
+    color:#ffffff;
+
+    padding:70px 60px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    box-shadow:0 25px 60px rgba(22,163,74,.20);
+
+}
+
+.belief-box h2{
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+}
+
+.belief-box blockquote{
+
+    font-size:24px;
+
+    line-height:1.8;
+
+    font-style:italic;
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-weight:300;
+
+}
+
+/* ===================================================
+                WHO WE SERVE
+=================================================== */
+
+.who-serve{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:120px auto;
+
+}
+
+.serve-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.serve-card{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    border:1px solid rgba(22,163,74,.08);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+    transition:.35s ease;
+
+}
+
+.serve-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 55px rgba(22,163,74,.15);
+
+}
+
+.serve-card h3{
+
+    font-size:28px;
+
+    color:#111827;
+
+    margin-bottom:18px;
+
+}
+
+.serve-card p{
+
+    font-size:17px;
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+}
+
+/* ===================================================
+                RESPONSIVE
+=================================================== */
+
+@media(max-width:992px){
+
+    .serve-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .belief-box{
+
+        padding:60px 40px;
+
+    }
+
+    .belief-box blockquote{
+
+        font-size:21px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .who-we-are,
+    .belief,
+    .who-serve{
+
+        width:95%;
+
+        margin:90px auto;
+
+    }
+
+    .who-content p{
+
+        font-size:16px;
+
+        text-align:left;
+
+    }
+
+    .serve-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .belief-box{
+
+        padding:45px 25px;
+
+    }
+
+    .belief-box h2{
+
+        font-size:32px;
+
+    }
+
+    .belief-box blockquote{
+
+        font-size:18px;
+
+        line-height:1.7;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .serve-card{
+
+        padding:30px;
+
+    }
+
+    .serve-card h3{
+
+        font-size:24px;
+
+    }
+
+    .belief-box h2{
+
+        font-size:28px;
+
+    }
+
+}

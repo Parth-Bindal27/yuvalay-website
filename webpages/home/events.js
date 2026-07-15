@@ -6,7 +6,7 @@ const events = [
         status: "Registration Open",
         date: "18 July 2026",
         location: "Vadodara",
-        image: "images/events/event1.png",
+        image: "../../images/events/event1.png",
         description: "Join us in making our city greener and creating a sustainable future together.",
         register: "#",
         readMore: "events.html"
@@ -18,7 +18,7 @@ const events = [
         status: "Upcoming",
         date: "22 July 2026",
         location: "Vadodara",
-        image: "images/events/event2.png",
+        image: "../../images/events/event2.png",
         description: "Donate blood and become a hero by helping those who need it the most.",
         register: "#",
         readMore: "events.html"
@@ -30,7 +30,7 @@ const events = [
         status: "Limited Seats",
         date: "30 July 2026",
         location: "Vadodara",
-        image: "images/events/event3.png",
+        image: "../../images/events/event3.png",
         description: "Meet industry experts and discover exciting career opportunities.",
         register: "#",
         readMore: "events.html"
