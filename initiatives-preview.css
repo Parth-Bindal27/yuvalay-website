@@ -1,0 +1,379 @@
+/* ===================================================
+                INITIATIVES
+=================================================== */
+
+.initiatives{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:120px auto;
+
+}
+
+/* ===================================================
+                HEADER
+=================================================== */
+
+.initiatives-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.initiatives-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:#ECFDF3;
+
+    color:#16A34A;
+
+    border-radius:999px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
+}
+
+.initiatives-header h2{
+
+    font-size:48px;
+
+    color:#111827;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.initiatives-header p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:#6B7280;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/* ===================================================
+                GRID
+=================================================== */
+
+.initiatives-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+/* ===================================================
+                CARD
+=================================================== */
+
+.initiative-card{
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(22,163,74,.08);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    transition:.4s ease;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.05);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.initiative-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#22C55E;
+
+    box-shadow:0 20px 50px rgba(22,163,74,.15);
+
+}
+
+/* ===================================================
+                TOP GLOW
+=================================================== */
+
+.initiative-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:70%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transition:1s;
+
+}
+
+.initiative-card:hover::before{
+
+    left:180%;
+
+}
+
+/* ===================================================
+                ICON
+=================================================== */
+
+.initiative-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#ECFDF3;
+
+    font-size:34px;
+
+    margin-bottom:25px;
+
+    transition:.35s ease;
+
+}
+
+.initiative-card:hover .initiative-icon{
+
+    transform:scale(1.12) rotate(-5deg);
+
+    background:#16A34A;
+
+    color:#fff;
+
+}
+
+/* ===================================================
+                TITLE
+=================================================== */
+
+.initiative-card h3{
+
+    font-size:24px;
+
+    color:#111827;
+
+    margin-bottom:15px;
+
+}
+
+/* ===================================================
+                DESCRIPTION
+=================================================== */
+
+.initiative-card p{
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+/* ===================================================
+                BUTTON
+=================================================== */
+
+.initiatives-footer{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:60px;
+
+}
+
+.initiatives-btn{
+
+    text-decoration:none;
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:16px 38px;
+
+    border-radius:999px;
+
+    background:#16A34A;
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.initiatives-btn:hover{
+
+    background:#15803D;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===================================================
+                TABLET
+=================================================== */
+
+@media(max-width:992px){
+
+    .initiatives-header h2{
+
+        font-size:40px;
+
+    }
+
+}
+
+/* ===================================================
+                MOBILE
+=================================================== */
+
+@media(max-width:768px){
+
+    .initiatives{
+
+        width:95%;
+
+        margin:90px auto;
+
+    }
+
+    .initiatives-header{
+
+        margin-bottom:50px;
+
+    }
+
+    .initiatives-header h2{
+
+        font-size:34px;
+
+    }
+
+    .initiatives-header p{
+
+        font-size:16px;
+
+    }
+
+    .initiative-card{
+
+        padding:28px;
+
+    }
+
+    .initiative-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:28px;
+
+    }
+
+    .initiatives-btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* ===================================================
+                SMALL MOBILE
+=================================================== */
+
+@media(max-width:480px){
+
+    .initiatives-header h2{
+
+        font-size:28px;
+
+    }
+
+    .initiatives-tag{
+
+        font-size:14px;
+
+    }
+
+    .initiative-card{
+
+        padding:24px;
+
+        border-radius:20px;
+
+    }
+
+    .initiative-card h3{
+
+        font-size:21px;
+
+    }
+
+    .initiative-card p{
+
+        font-size:15px;
+
+    }
+
+}
