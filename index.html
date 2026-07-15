@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yuvalay</title>
+
+    <!-- Remix Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="live-notification.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="impact.css">
+    <link rel="stylesheet" href="footer.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <!-- Left -->
+
+            <div class="nav-left">
+
+                <a href="index.html" class="logo">
+
+                    <img src="images/logo.png" alt="Yuvalay Logo">
+
+                </a>
+
+            </div>
+
+            <!-- Center -->
+
+            <div class="nav-center" id="navMenu">
+
+                <ul class="nav-links">
+
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="#">About</a></li>
+
+                    <li><a href="#">Events</a></li>
+
+                    <li><a href="#">Gallery</a></li>
+
+                    <li><a href="#">Contact</a></li>
+
+                    <!-- Mobile Donate -->
+
+                    <li class="mobile-donate">
+
+                        <a href="#" class="donate-btn">
+
+                            Donate
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Desktop Donate -->
+
+            <div class="nav-right">
+
+                <a href="#" class="donate-btn">
+
+                    Donate
+
+                </a>
+
+            </div>
+
+            <!-- Hamburger -->
+
+            <div class="hamburger" id="hamburger">
+
+                ☰
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= LIVE NOTIFICATION ================= -->
+
+    <div class="live-notification">
+
+        <span class="live-dot"></span>
+
+        <div class="live-news">
+
+            <span class="live-text" id="liveText">
+
+                Live Update: Registrations for Yuvalay Summer Camp 2026 are now open.
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+
+                Empowering Youth Since 2012
+
+            </span>
+
+            <h1>
+
+                Building a Better Tomorrow <br>
+                Through Youth Leadership
+
+            </h1>
+
+            <p>
+
+                Yuvalay empowers young minds through education,
+                innovation, social initiatives and leadership
+                programs to create lasting impact in communities.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#" class="primary-btn">
+
+                    Join Us
+
+                </a>
+
+                <a href="#" class="secondary-btn">
+
+                    Explore Programs
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="images/hero.png" alt="Hero Image">
+
+        </div>
+
+    </section>
+
+        <!-- ================= UPCOMING EVENTS ================= -->
+
+    <section class="events">
+
+        <div class="events-header">
+
+            <span class="events-tag">
+                What's Happening
+            </span>
+
+            <h2>Upcoming Events & Opportunities</h2>
+
+            <p>
+                Discover our latest events, workshops, community drives,
+                and volunteer opportunities.
+            </p>
+
+        </div>
+
+        <!-- JavaScript yaha cards banayega -->
+        <div class="events-grid" id="eventsGrid"></div>
+
+        <div class="events-footer">
+            <a href="events.html" class="view-events-btn">
+                View All Events →
+            </a>
+        </div>
+
+    </section>
+
+    <!-- ================= IMPACT SECTION ================= -->
+
+    <section class="impact">
+
+        <div class="impact-header">
+
+            <span class="impact-tag">
+                Our Impact
+            </span>
+
+            <h2>
+                Creating Meaningful Change
+            </h2>
+
+            <p>
+                Every initiative at Yuvalay contributes towards empowering youth,
+                strengthening communities, and building a better future.
+            </p>
+
+        </div>
+
+        <div class="impact-container">
+
+            <div class="impact-card">
+
+                <h3 class="counter" data-target="10000">0</h3>
+
+                <p>Lives Impacted</p>
+
+            </div>
+
+            <div class="impact-card">
+
+                <h3 class="counter" data-target="500">0</h3>
+
+                <p>Volunteers</p>
+
+            </div>
+
+            <div class="impact-card">
+
+                <h3 class="counter" data-target="120">0</h3>
+
+                <p>Events Organized</p>
+
+            </div>
+
+            <div class="impact-card">
+
+                <h3 class="counter" data-target="25">0</h3>
+
+                <p>Partner Organizations</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+
+                <img src="images/logo.png"
+                     class="footer-logo"
+                     alt="Yuvalay">
+
+                <p>
+
+                    Empowering youth through education,
+                    innovation, leadership and
+                    community service.
+
+                </p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Contact</h3>
+
+                <p>Email : info@yuvalay.org</p>
+
+                <p>Phone : +91 98765 43210</p>
+
+                <p>Vadodara, Gujarat</p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-links">
+
+                    <a href="#">Instagram</a>
+
+                    <a href="#">Facebook</a>
+
+                    <a href="#">LinkedIn</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Yuvalay. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="navbar.js"></script>
+    <script src="live-notification.js"></script>
+    <script src="events.js"></script>
+    <script src="impact.js"></script>
+
+</body>
+
+</html>

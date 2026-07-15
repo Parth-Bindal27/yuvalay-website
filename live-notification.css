@@ -1,0 +1,146 @@
+/* ===========================
+    LIVE NOTIFICATION
+=========================== */
+
+.live-notification{
+
+    width:90%;
+    max-width:1200px;
+
+    height:55px;
+
+    margin:20px auto 0;
+
+    display:flex;
+    align-items:center;
+
+    background:#16a34a;
+
+    border-radius:12px;
+
+    color:#fff;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+    position:relative;
+}
+
+
+/* ===========================
+        LIVE LABEL
+=========================== */
+
+/* LIVE section */
+
+.live-label{
+
+    width:110px;
+
+    height:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    background:#15803d;
+
+    flex-shrink:0;
+
+    font-weight:700;
+}
+
+
+/* ===========================
+        RED DOT
+=========================== */
+
+.live-dot{
+
+    position:absolute;
+
+    left:20px;
+
+    width:10px;
+    height:10px;
+
+    background:#ff3b30;
+
+    border-radius:50%;
+
+    animation:blink 1s infinite;
+}
+
+
+/* ===========================
+        NEWS AREA
+=========================== */
+
+/* News section */
+
+.live-news{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+/* ===========================
+        NEWS TEXT
+=========================== */
+
+.live-text{
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:opacity .35s ease;
+}
+
+/* ===========================
+        HOVER
+=========================== */
+
+.live-notification:hover{
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+        BLINK
+=========================== */
+
+@keyframes blink{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.3;
+    }
+
+    100%{
+        opacity:1;
+    }
+
+}

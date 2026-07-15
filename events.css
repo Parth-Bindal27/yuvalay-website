@@ -1,0 +1,681 @@
+/* ===================================================
+                    EVENTS SECTION
+=================================================== */
+
+.events{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:120px auto;
+
+}
+
+/* ===================================================
+                    SECTION HEADER
+=================================================== */
+
+.events-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.events-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:#ECFDF3;
+
+    color:#16A34A;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    margin-bottom:18px;
+
+}
+
+.events-header h2{
+
+    font-size:48px;
+
+    color:#111827;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+.events-header p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#6B7280;
+
+}
+
+/* ===================================================
+                    GRID
+=================================================== */
+
+.events-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:35px;
+
+}
+
+/* ===================================================
+                    EVENT CARD
+=================================================== */
+
+.event-card{
+
+    --x:50%;
+    --y:50%;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    background:
+        radial-gradient(
+            circle at var(--x) var(--y),
+            rgba(255,255,255,.35),
+            transparent 180px
+        ),
+        rgba(255,255,255,.82);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.06);
+
+    transform-style:preserve-3d;
+
+    will-change:transform;
+
+    cursor:pointer;
+
+    transition:
+        box-shadow .35s ease,
+        transform .08s linear;
+
+}
+
+/* ===============================
+        CURSOR GLOW BORDER
+================================ */
+
+.event-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:26px;
+
+    padding:2px;
+
+    background:
+        radial-gradient(
+            250px circle at var(--x) var(--y),
+            rgba(34,197,94,.95),
+            rgba(34,197,94,.45),
+            transparent 65%
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+
+    opacity:0;
+
+    transition:opacity .3s;
+
+}
+
+.event-card:hover::after{
+
+    opacity:1;
+
+}
+
+/* Glass Reflection */
+
+.event-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-150%;
+
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.55),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:1s;
+
+    pointer-events:none;
+
+}
+
+/* Green Glow */
+
+.event-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:24px;
+
+    border:1px solid transparent;
+
+    transition:.4s;
+
+    pointer-events:none;
+
+}
+
+/* Hover */
+
+.event-card:hover{
+
+    border-color:#22C55E;
+
+    box-shadow:
+        0 20px 55px rgba(22,163,74,.18);
+
+}
+
+.event-card:hover::before{
+
+    left:180%;
+
+}
+
+.event-card:hover::after{
+
+    border-color:rgba(34,197,94,.35);
+
+}
+
+/* ===================================================
+                    EVENT IMAGE
+=================================================== */
+
+.event-image{
+
+    position:relative;
+
+    width:100%;
+
+    height:240px;
+
+    overflow:hidden;
+
+}
+
+.event-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.event-card:hover .event-image img{
+
+}
+
+/* ===================================================
+                STATUS BADGE
+=================================================== */
+
+.event-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 18px;
+
+    background:#ECFDF3;
+
+    color:#15803D;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+/* Small Green Dot */
+
+.event-status::before{
+
+    content:"";
+
+    width:8px;
+
+    height:8px;
+
+    background:#22C55E;
+
+    border-radius:50%;
+
+    animation:pulse 1.8s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.6;
+
+    }
+
+    100%{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ===================================================
+                    CONTENT
+=================================================== */
+
+.event-content{
+
+    padding:28px;
+
+}
+
+.event-content h3{
+
+    font-size:24px;
+
+    color:#111827;
+
+    margin-bottom:18px;
+
+    line-height:1.3;
+
+}
+
+/* ===================================================
+                    INFO
+=================================================== */
+
+.event-info{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    color:#6B7280;
+
+    font-size:15px;
+
+    margin-bottom:20px;
+
+}
+
+.event-description{
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+    min-height:70px;
+
+}
+
+/* ===================================================
+                    BUTTONS
+=================================================== */
+
+.event-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+/* Register */
+
+.register-btn{
+
+    flex:1;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    background:#16A34A;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.register-btn:hover{
+
+    background:#15803D;
+
+}
+
+/* Read More */
+
+.read-btn{
+
+    flex:1;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    border:1px solid #16A34A;
+
+    color:#16A34A;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.read-btn:hover{
+
+    background:#16A34A;
+
+    color:#ffffff;
+
+}
+
+/* ===================================================
+                VIEW ALL EVENTS
+=================================================== */
+
+.events-footer{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.view-events-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    padding:16px 36px;
+
+    background:#16A34A;
+
+    color:#ffffff;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.view-events-btn:hover{
+
+    background:#15803D;
+
+}
+
+/* ===================================================
+                HOVER TRANSITIONS
+=================================================== */
+
+.event-card,
+.event-image img,
+.register-btn,
+.read-btn,
+.view-events-btn{
+
+    transition:all .4s ease;
+
+}
+
+/* ===================================================
+            BUTTON SHINE EFFECT
+=================================================== */
+
+.register-btn,
+.read-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.register-btn::before,
+.read-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transition:.8s;
+
+}
+
+.register-btn:hover::before,
+.read-btn:hover::before{
+
+    left:170%;
+
+}
+
+/* ===================================================
+            CARD FADE ANIMATION
+=================================================== */
+
+.event-card{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ===================================================
+            RESPONSIVE
+=================================================== */
+
+@media(max-width:1200px){
+
+    .events-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .events{
+
+        width:95%;
+
+        margin:80px auto;
+
+    }
+
+    .events-header h2{
+
+        font-size:34px;
+
+    }
+
+    .events-header p{
+
+        font-size:16px;
+
+    }
+
+    .events-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .event-buttons{
+
+        flex-direction:column;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .event-content{
+
+        padding:22px;
+
+    }
+
+    .event-content h3{
+
+        font-size:21px;
+
+    }
+
+    .event-info{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+    .event-description{
+
+        font-size:15px;
+
+    }
+
+}

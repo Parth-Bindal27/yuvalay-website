@@ -1,0 +1,139 @@
+/* ===========================
+          HERO
+=========================== */
+
+.hero{
+
+    width:90%;
+    max-width:1300px;
+
+    margin:80px auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:80px;
+}
+
+/* Left */
+
+.hero-content{
+
+    flex:1;
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    background:#e8f7ee;
+
+    color:#15803d;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+
+    font-size:58px;
+
+    line-height:1.15;
+
+    color:#111827;
+
+    margin-bottom:25px;
+}
+
+.hero p{
+
+    font-size:19px;
+
+    color:#6b7280;
+
+    line-height:1.8;
+
+    max-width:620px;
+
+    margin-bottom:40px;
+}
+
+/* Buttons */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+}
+
+.primary-btn{
+
+    background:#16a34a;
+
+    color:#fff;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.primary-btn:hover{
+
+    background:#15803d;
+}
+
+.secondary-btn{
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    border:2px solid #16a34a;
+
+    color:#16a34a;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+
+    background:#16a34a;
+
+    color:#fff;
+}
+
+/* Image */
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:flex-end;
+}
+
+.hero-image img{
+
+    width:100%;
+    max-width:600px;
+}
