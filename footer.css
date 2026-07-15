@@ -1,135 +1,300 @@
-/* ===========================
-          FOOTER
-=========================== */
+/* ===================================================
+                        FOOTER
+=================================================== */
 
 .footer{
 
-    background:#0d1117;
+    background:#0B1120;
 
     color:#ffffff;
 
-    padding:70px 70px 25px;
+    padding:90px 8% 30px;
+
 }
 
-/* ===========================
-      FOOTER CONTAINER
-=========================== */
+/* ===================================================
+                    CONTAINER
+=================================================== */
 
 .footer-container{
 
+    max-width:1400px;
+
+    margin:auto;
+
     display:grid;
 
-    grid-template-columns:2fr 1fr 1fr 1fr;
+    grid-template-columns:2.2fr 1fr 1.2fr 1fr;
 
-    gap:60px;
+    gap:70px;
 
-    margin-bottom:50px;
+    align-items:start;
+
 }
 
-/* ===========================
-        LOGO
-=========================== */
+/* ===================================================
+                    BRAND
+=================================================== */
 
 .footer-logo{
 
-    width:140px;
+    width:150px;
 
-    margin-bottom:20px;
+    background:#ffffff;
+
+    padding:12px;
+
+    border-radius:16px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+    margin-bottom:22px;
+
+}
+
+.footer-brand{
+
+    font-size:26px;
+
+    color:#22C55E;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
 }
 
 .footer-box p{
 
-    color:#c9d1d9;
+    color:#C7CDD6;
 
-    line-height:1.8;
+    font-size:16px;
 
-    font-size:15px;
+    line-height:1.9;
+
+    max-width:330px;
+
 }
 
-/* ===========================
-        HEADINGS
-=========================== */
+/* ===================================================
+                    HEADINGS
+=================================================== */
 
 .footer-box h3{
 
-    color:#22c55e;
+    font-size:22px;
 
-    margin-bottom:22px;
+    color:#22C55E;
 
-    font-size:20px;
+    margin-bottom:24px;
+
 }
 
-/* ===========================
-        LINKS
-=========================== */
+/* ===================================================
+                    LINKS
+=================================================== */
 
 .footer-box ul{
 
     list-style:none;
+
+    padding:0;
+
 }
 
 .footer-box ul li{
 
-    margin-bottom:15px;
+    margin-bottom:16px;
+
 }
 
 .footer-box ul li a{
 
-    color:#c9d1d9;
+    color:#D4D4D8;
 
     text-decoration:none;
 
-    transition:.3s;
+    transition:.3s ease;
+
 }
 
 .footer-box ul li a:hover{
 
-    color:#22c55e;
+    color:#22C55E;
+
+    padding-left:6px;
+
 }
 
-/* ===========================
-      SOCIAL LINKS
-=========================== */
+/* ===================================================
+                    CONTACT
+=================================================== */
 
-.social-links{
+.footer-contact{
 
     display:flex;
 
     flex-direction:column;
 
-    gap:15px;
+    gap:14px;
+
+}
+
+.footer-contact p{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    color:#D4D4D8;
+
+    margin:0;
+
+    line-height:1.8;
+
+}
+
+.footer-contact i{
+
+    color:#22C55E;
+
+    font-size:18px;
+
+    margin-top:3px;
+
+}
+
+/* ===================================================
+                    SOCIAL
+=================================================== */
+
+.social-links{
+
+    display:flex;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
 }
 
 .social-links a{
 
-    color:#c9d1d9;
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:#ffffff;
+
+    font-size:22px;
 
     text-decoration:none;
 
-    transition:.3s;
+    transition:.35s ease;
+
 }
 
 .social-links a:hover{
 
-    color:#22c55e;
-}
+    background:#22C55E;
 
-/* ===========================
-      COPYRIGHT
-=========================== */
+    color:#fff;
+
+    transform:translateY(-5px) scale(1.08);
+
+}
+/* ===================================================
+                    COPYRIGHT
+=================================================== */
 
 .footer-bottom{
 
-    border-top:1px solid rgba(255,255,255,.1);
+    border-top:1px solid rgba(255,255,255,.08);
 
-    padding-top:20px;
+    padding-top:25px;
 
     text-align:center;
+
 }
 
 .footer-bottom p{
 
-    color:#8b949e;
+    color:#9CA3AF;
 
-    font-size:14px;
+    font-size:15px;
+
+}
+
+/* ===================================================
+                    RESPONSIVE
+=================================================== */
+
+@media(max-width:992px){
+
+    .footer-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:50px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .footer{
+
+        padding:70px 6% 25px;
+
+    }
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .footer-box p{
+
+        margin:auto;
+
+    }
+
+    .footer-contact p{
+
+        justify-content:center;
+
+    }
+
+    .social-links{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .footer-logo{
+
+        width:150px;
+
+    }
+
 }
