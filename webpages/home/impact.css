@@ -114,3 +114,137 @@
 
     font-size:18px;
 }
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+    .impact{
+
+        width:95%;
+
+        margin:90px auto;
+
+    }
+
+    .impact-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:20px;
+
+    }
+
+    .impact-header h2{
+
+        font-size:38px;
+
+    }
+
+    .counter{
+
+        font-size:42px;
+
+    }
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .impact{
+
+        margin:70px auto;
+
+    }
+
+    .impact-header{
+
+        margin-bottom:45px;
+
+    }
+
+    .impact-header h2{
+
+        font-size:30px;
+
+        line-height:1.3;
+
+    }
+
+    .impact-header p{
+
+        font-size:16px;
+
+        padding:0 10px;
+
+    }
+
+    .impact-container{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+    .impact-card{
+
+        padding:35px 20px;
+
+    }
+
+    .counter{
+
+        font-size:38px;
+
+    }
+
+    .impact-card p{
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ==========================================
+            SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    .impact-tag{
+
+        font-size:13px;
+
+        padding:8px 18px;
+
+    }
+
+    .impact-header h2{
+
+        font-size:26px;
+
+    }
+
+    .counter{
+
+        font-size:34px;
+
+    }
+
+    .impact-card{
+
+        border-radius:16px;
+
+        padding:30px 18px;
+
+    }
+
+}

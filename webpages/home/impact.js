@@ -1,47 +1,51 @@
 const counters = document.querySelectorAll(".counter");
 
-const speed = 120;
-
 const observer = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (!entry.isIntersecting) return;
 
-            const counter = entry.target;
+        const counter = entry.target;
 
-            const target = +counter.dataset.target;
+        const target = parseInt(counter.dataset.target);
 
-            let count = 0;
+        let current = 0;
 
-            const updateCounter = () => {
+        // Faster animation on mobile
+        const speed = window.innerWidth <= 768 ? 60 : 120;
 
-                const increment = Math.ceil(target / speed);
+        const increment = Math.max(1, Math.ceil(target / speed));
 
-                if(count < target){
+        function updateCounter() {
 
-                    count += increment;
+            current += increment;
 
-                    counter.innerText = count.toLocaleString();
+            if (current < target) {
 
-                    requestAnimationFrame(updateCounter);
+                counter.textContent = current.toLocaleString();
 
-                }else{
+                requestAnimationFrame(updateCounter);
 
-                    counter.innerText = target.toLocaleString() + "+";
+            } else {
 
-                }
+                counter.textContent = target.toLocaleString() + "+";
 
-            };
-
-            updateCounter();
-
-            observer.unobserve(counter);
+            }
 
         }
 
+        updateCounter();
+
+        observer.unobserve(counter);
+
     });
 
-},{threshold:0.5});
+}, {
 
-counters.forEach(counter=>observer.observe(counter));
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+
+});
+
+counters.forEach(counter => observer.observe(counter));
