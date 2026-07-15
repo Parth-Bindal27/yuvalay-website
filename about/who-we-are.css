@@ -1,0 +1,324 @@
+/* ===================================================
+                WHO WE ARE
+=================================================== */
+
+.who-we-are{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:120px auto;
+
+}
+
+/* ===================================================
+                CONTAINER
+=================================================== */
+
+.who-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/* ===================================================
+                IMAGE
+=================================================== */
+
+.who-image{
+
+    position:relative;
+
+}
+
+.who-image img{
+
+    width:100%;
+
+    border-radius:28px;
+
+    object-fit:cover;
+
+    display:block;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.12);
+
+    transition:.4s ease;
+
+}
+
+.who-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ===================================================
+                CONTENT
+=================================================== */
+
+.who-content{
+
+    max-width:620px;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:#ECFDF3;
+
+    color:#16A34A;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+}
+
+.who-content h2{
+
+    font-size:48px;
+
+    color:#111827;
+
+    line-height:1.2;
+
+    margin-bottom:28px;
+
+}
+
+.who-content p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:#6B7280;
+
+    margin-bottom:22px;
+
+}
+
+/* ===================================================
+                HIGHLIGHTS
+=================================================== */
+
+.who-highlights{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    margin:40px 0;
+
+}
+
+.highlight{
+
+    padding:24px 20px;
+
+    border-radius:20px;
+
+    background:#ffffff;
+
+    border:1px solid rgba(22,163,74,.08);
+
+    text-align:center;
+
+    transition:.35s ease;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.05);
+
+}
+
+.highlight:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#16A34A;
+
+    box-shadow:
+        0 20px 45px rgba(22,163,74,.15);
+
+}
+
+.highlight h3{
+
+    font-size:34px;
+
+    color:#16A34A;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+.highlight span{
+
+    font-size:15px;
+
+    color:#6B7280;
+
+    line-height:1.5;
+
+}
+
+/* ===================================================
+                BUTTON
+=================================================== */
+
+.who-content .primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    background:#16A34A;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.who-content .primary-btn:hover{
+
+    background:#15803D;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(22,163,74,.25);
+
+}
+
+/* ===================================================
+                TABLET
+=================================================== */
+
+@media(max-width:992px){
+
+    .who-container{
+
+        grid-template-columns:1fr;
+
+        gap:60px;
+
+    }
+
+    .who-content{
+
+        max-width:100%;
+
+        text-align:center;
+
+    }
+
+    .who-content h2{
+
+        font-size:40px;
+
+    }
+
+}
+
+/* ===================================================
+                MOBILE
+=================================================== */
+
+@media(max-width:768px){
+
+    .who-we-are{
+
+        width:95%;
+
+        margin:90px auto;
+
+    }
+
+    .who-content h2{
+
+        font-size:34px;
+
+    }
+
+    .who-content p{
+
+        font-size:16px;
+
+    }
+
+    .who-highlights{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .highlight{
+
+        padding:22px;
+
+    }
+
+    .who-content .primary-btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* ===================================================
+                SMALL MOBILE
+=================================================== */
+
+@media(max-width:480px){
+
+    .section-tag{
+
+        font-size:14px;
+
+    }
+
+    .who-content h2{
+
+        font-size:30px;
+
+    }
+
+    .highlight h3{
+
+        font-size:30px;
+
+    }
+
+}

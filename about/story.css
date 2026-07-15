@@ -1,0 +1,368 @@
+/* ===================================================
+                    OUR STORY
+=================================================== */
+
+.our-story{
+
+    width:90%;
+    max-width:1300px;
+
+    margin:120px auto;
+
+}
+
+/* ===================================================
+                    HEADER
+=================================================== */
+
+.story-header{
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:0 auto 70px;
+
+}
+
+.story-header h2{
+
+    font-size:52px;
+
+    color:#111827;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin:20px 0;
+
+}
+
+.story-header p{
+
+    font-size:18px;
+
+    color:#6B7280;
+
+    line-height:1.9;
+
+}
+
+/* ===================================================
+                STORY CONTAINER
+=================================================== */
+
+.story-container{
+
+    background:#ffffff;
+
+    border-radius:30px;
+
+    padding:70px;
+
+    border:1px solid rgba(22,163,74,.08);
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.05);
+
+}
+
+/* ===================================================
+                STORY CONTENT
+=================================================== */
+
+.story-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+.story-content p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#4B5563;
+
+    text-align:justify;
+
+}
+
+.story-content strong{
+
+    color:#16A34A;
+
+    font-weight:700;
+
+}
+
+/* ===================================================
+                    QUOTE
+=================================================== */
+
+.story-quote{
+
+    margin:70px 0;
+
+    padding:50px;
+
+    border-radius:24px;
+
+    background:linear-gradient(
+        135deg,
+        #16A34A,
+        #22C55E
+    );
+
+    color:#ffffff;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.story-quote::before{
+
+    content:"❝";
+
+    position:absolute;
+
+    top:-30px;
+
+    left:30px;
+
+    font-size:140px;
+
+    color:rgba(255,255,255,.12);
+
+    font-family:serif;
+
+}
+
+.story-quote blockquote{
+
+    font-size:30px;
+
+    line-height:1.7;
+
+    font-weight:500;
+
+    font-style:italic;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.story-quote span{
+
+    display:block;
+
+    margin-top:25px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    opacity:.95;
+
+}
+
+/* ===================================================
+                HIGHLIGHT
+=================================================== */
+
+.story-highlight{
+
+    margin-top:60px;
+
+    padding:45px;
+
+    border-radius:24px;
+
+    background:#F8FFFA;
+
+    border-left:6px solid #16A34A;
+
+}
+
+.story-highlight h3{
+
+    font-size:32px;
+
+    color:#111827;
+
+    margin-bottom:18px;
+
+}
+
+.story-highlight p{
+
+    font-size:18px;
+
+    color:#4B5563;
+
+    line-height:1.9;
+
+}
+
+/* ===================================================
+                    HOVER
+=================================================== */
+
+.story-container:hover{
+
+    box-shadow:
+        0 30px 70px rgba(22,163,74,.10);
+
+    transition:.4s;
+
+}
+
+/* ===================================================
+                TABLET
+=================================================== */
+
+@media(max-width:992px){
+
+    .story-container{
+
+        padding:50px;
+
+    }
+
+    .story-header h2{
+
+        font-size:42px;
+
+    }
+
+    .story-quote blockquote{
+
+        font-size:24px;
+
+    }
+
+}
+
+/* ===================================================
+                MOBILE
+=================================================== */
+
+@media(max-width:768px){
+
+    .our-story{
+
+        width:95%;
+
+        margin:90px auto;
+
+    }
+
+    .story-container{
+
+        padding:35px 25px;
+
+    }
+
+    .story-header{
+
+        margin-bottom:50px;
+
+    }
+
+    .story-header h2{
+
+        font-size:34px;
+
+    }
+
+    .story-header p{
+
+        font-size:16px;
+
+    }
+
+    .story-content p{
+
+        font-size:16px;
+
+        text-align:left;
+
+    }
+
+    .story-quote{
+
+        padding:35px 25px;
+
+    }
+
+    .story-quote::before{
+
+        font-size:90px;
+
+        left:15px;
+
+    }
+
+    .story-quote blockquote{
+
+        font-size:20px;
+
+    }
+
+    .story-highlight{
+
+        padding:30px 25px;
+
+    }
+
+    .story-highlight h3{
+
+        font-size:26px;
+
+    }
+
+    .story-highlight p{
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ===================================================
+            SMALL MOBILE
+=================================================== */
+
+@media(max-width:480px){
+
+    .story-header h2{
+
+        font-size:30px;
+
+    }
+
+    .story-quote blockquote{
+
+        font-size:18px;
+
+    }
+
+    .story-highlight h3{
+
+        font-size:22px;
+
+    }
+
+}
