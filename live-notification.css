@@ -1,5 +1,5 @@
 /* ===========================
-    LIVE NOTIFICATION
+        LIVE NOTIFICATION
 =========================== */
 
 .live-notification{
@@ -7,62 +7,56 @@
     width:90%;
     max-width:1200px;
 
-    height:55px;
+    min-height:56px;
 
-    margin:20px auto 0;
+    margin:20px auto;
 
     display:flex;
     align-items:center;
 
-    background:#16a34a;
+    background:#16A34A;
 
-    border-radius:12px;
+    border-radius:14px;
 
     color:#fff;
 
     overflow:hidden;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
 
-    position:relative;
 }
-
 
 /* ===========================
         LIVE LABEL
 =========================== */
 
-/* LIVE section */
-
 .live-label{
 
-    width:110px;
+    min-width:110px;
 
-    height:100%;
+    height:56px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     gap:8px;
 
-    background:#15803d;
+    background:#15803D;
+
+    font-weight:700;
 
     flex-shrink:0;
 
-    font-weight:700;
 }
 
-
 /* ===========================
-        RED DOT
+        LIVE DOT
 =========================== */
 
 .live-dot{
-
-    position:absolute;
-
-    left:20px;
 
     width:10px;
     height:10px;
@@ -72,30 +66,27 @@
     border-radius:50%;
 
     animation:blink 1s infinite;
-}
 
+}
 
 /* ===========================
         NEWS AREA
 =========================== */
 
-/* News section */
-
 .live-news{
 
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
+    flex:1;
 
     display:flex;
 
     justify-content:center;
 
     align-items:center;
+
+    padding:0 20px;
+
+    overflow:hidden;
+
 }
 
 /* ===========================
@@ -108,20 +99,15 @@
 
     text-align:center;
 
+    color:#fff;
+
     font-size:15px;
 
-    font-weight:500;
+    font-weight:600;
 
-    transition:opacity .35s ease;
-}
+    line-height:1.4;
 
-/* ===========================
-        HOVER
-=========================== */
-
-.live-notification:hover{
-
-    cursor:pointer;
+    transition:.3s;
 
 }
 
@@ -131,16 +117,81 @@
 
 @keyframes blink{
 
-    0%{
-        opacity:1;
+    0%{opacity:1;}
+
+    50%{opacity:.3;}
+
+    100%{opacity:1;}
+
+}
+
+/* ===========================
+        TABLET
+=========================== */
+
+@media(max-width:768px){
+
+    .live-notification{
+
+        width:94%;
+
+        min-height:52px;
+
     }
 
-    50%{
-        opacity:.3;
+    .live-label{
+
+        min-width:90px;
+
+        font-size:13px;
+
     }
 
-    100%{
-        opacity:1;
+    .live-text{
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ===========================
+        MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+    .live-notification{
+
+        width:95%;
+
+        min-height:48px;
+
+        border-radius:12px;
+
+    }
+
+    .live-label{
+
+        min-width:72px;
+
+        font-size:12px;
+
+    }
+
+    .live-dot{
+
+        width:8px;
+        height:8px;
+
+    }
+
+    .live-text{
+
+        font-size:12px;
+
+        line-height:1.3;
+
     }
 
 }
