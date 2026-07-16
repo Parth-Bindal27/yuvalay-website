@@ -1,0 +1,1346 @@
+/* ==========================================
+            GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ==========================================
+            ROOT VARIABLES
+========================================== */
+
+:root{
+
+    --primary:#16a34a;
+    --primary-dark:#15803d;
+    --secondary:#22c55e;
+
+    --text:#1f2937;
+    --light-text:#6b7280;
+
+    --white:#ffffff;
+    --bg:#f8fafc;
+
+    --glass:rgba(255,255,255,.55);
+    --border:rgba(255,255,255,.45);
+
+    --shadow:0 20px 45px rgba(0,0,0,.08);
+    --shadow-hover:0 25px 60px rgba(22,163,74,.20);
+
+    --radius:22px;
+
+}
+
+
+/* ==========================================
+                RESET
+========================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+
+}
+
+section{
+
+    padding:90px 8%;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+
+/* ==========================================
+            HERO SECTION
+========================================== */
+
+.donate-hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(8,20,12,.65),rgba(8,20,12,.75)),
+    url("../images/donate-banner.jpg") center/cover no-repeat;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(34,197,94,.25),
+    transparent 45%);
+
+}
+
+
+.hero-content{
+
+    max-width:900px;
+
+    position:relative;
+
+    z-index:2;
+
+    color:#fff;
+
+    animation:fadeUp 1s ease;
+
+}
+
+
+.hero-content h1{
+
+    font-size:65px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+    letter-spacing:-1px;
+
+}
+
+
+.hero-content p{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    color:#f1f5f9;
+
+    max-width:760px;
+
+    margin:auto auto 45px;
+
+}
+
+
+/* ==========================================
+            DONATE BUTTON
+========================================== */
+
+.donate-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 42px;
+
+    background:linear-gradient(135deg,
+    var(--primary),
+    var(--secondary));
+
+    color:#fff;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    font-size:18px;
+
+    transition:.35s;
+
+    box-shadow:
+    0 15px 35px rgba(22,163,74,.35);
+
+}
+
+
+.donate-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 20px 45px rgba(22,163,74,.45);
+
+}
+
+
+/* ==========================================
+            SECTION TITLE
+========================================== */
+
+.section-title{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+}
+
+
+.section-title span{
+
+    display:inline-block;
+
+    background:#dcfce7;
+
+    color:var(--primary-dark);
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+
+    text-transform:uppercase;
+
+}
+
+
+.section-title h2{
+
+    font-size:46px;
+
+    margin-bottom:22px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+
+.section-title p{
+
+    font-size:18px;
+
+    color:var(--light-text);
+
+    line-height:1.9;
+
+}
+
+
+/* ==========================================
+            ANIMATION
+========================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+            WHY DONATE SECTION
+========================================== */
+
+.why-donate{
+
+    background:#ffffff;
+
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.why-card{
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    border-radius:var(--radius);
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.why-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    transition:.5s;
+
+}
+
+.why-card:hover::before{
+
+    left:0;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.why-card .icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:42px;
+
+    background:#dcfce7;
+
+    border-radius:50%;
+
+}
+
+.why-card h3{
+
+    font-size:25px;
+
+    margin-bottom:18px;
+
+    color:var(--text);
+
+}
+
+.why-card p{
+
+    color:var(--light-text);
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+
+
+/* ==========================================
+            IMPACT SECTION
+========================================== */
+
+.impact-section{
+
+    background:linear-gradient(
+        180deg,
+        #f8fafc,
+        #eefbf2
+    );
+
+}
+
+.impact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+}
+
+.impact-card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+    border:2px solid transparent;
+
+}
+
+.impact-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:var(--primary);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.impact-card h3{
+
+    font-size:48px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+.impact-card p{
+
+    color:var(--light-text);
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* ==========================================
+            HELP SECTION
+========================================== */
+
+.help-section{
+
+    background:#ffffff;
+
+}
+
+.help-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.help-grid div{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:22px 25px;
+
+    font-size:17px;
+
+    font-weight:500;
+
+    color:var(--text);
+
+    border-left:6px solid var(--primary);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.help-grid div:hover{
+
+    transform:translateX(8px);
+
+    background:#f0fdf4;
+
+    box-shadow:0 15px 35px rgba(22,163,74,.15);
+
+}
+
+
+
+/* ==========================================
+            SMALL DECORATIVE EFFECT
+========================================== */
+
+.why-card,
+.impact-card,
+.help-grid div{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+/* ==========================================
+            DONATION FORM
+========================================== */
+
+.donation-form{
+
+    background:linear-gradient(180deg,#f8fafc,#ffffff);
+
+}
+
+.donation-form form{
+
+    max-width:850px;
+
+    margin:50px auto 0;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    padding:45px;
+
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,.5);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.donation-form input,
+.donation-form select,
+.donation-form textarea{
+
+    width:100%;
+
+    margin-bottom:22px;
+
+    padding:18px 20px;
+
+    border:2px solid #e5e7eb;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    font-family:'Poppins',sans-serif;
+
+    background:#ffffff;
+
+    color:var(--text);
+
+    transition:.35s;
+
+    outline:none;
+
+}
+
+.donation-form textarea{
+
+    resize:vertical;
+
+    min-height:150px;
+
+}
+
+.donation-form input:focus,
+.donation-form select:focus,
+.donation-form textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(22,163,74,.15);
+
+}
+
+.donation-form button{
+
+    width:100%;
+
+    border:none;
+
+    padding:18px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#fff;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(22,163,74,.30);
+
+}
+
+.donation-form button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(22,163,74,.45);
+
+}
+
+
+
+/* ==========================================
+                FAQ SECTION
+========================================== */
+
+.faq-section{
+
+    background:#ffffff;
+
+}
+
+.faq-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.faq-container details{
+
+    background:#fff;
+
+    margin-bottom:20px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid #e5e7eb;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+.faq-container details:hover{
+
+    box-shadow:0 15px 35px rgba(22,163,74,.15);
+
+}
+
+.faq-container summary{
+
+    list-style:none;
+
+    cursor:pointer;
+
+    padding:22px 28px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.faq-container summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.faq-container summary::after{
+
+    content:"+";
+
+    position:absolute;
+
+    right:28px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:28px;
+
+    color:var(--primary);
+
+    transition:.3s;
+
+}
+
+.faq-container details[open] summary::after{
+
+    content:"−";
+
+}
+
+.faq-container details[open]{
+
+    border-color:var(--primary);
+
+}
+
+.faq-container details p{
+
+    padding:0 28px 25px;
+
+    color:var(--light-text);
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+
+
+/* ==========================================
+            FORM PLACEHOLDERS
+========================================== */
+
+::placeholder{
+
+    color:#9ca3af;
+
+}
+
+
+
+/* ==========================================
+            INPUT HOVER
+========================================== */
+
+.donation-form input:hover,
+.donation-form textarea:hover,
+.donation-form select:hover{
+
+    border-color:#cbd5e1;
+
+}
+
+
+
+/* ==========================================
+            SUBTLE ANIMATION
+========================================== */
+
+.donation-form form,
+.faq-container details{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+/* ==========================================
+            FINAL CTA SECTION
+========================================== */
+
+.donate-cta{
+
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+
+    color:#ffffff;
+
+    text-align:center;
+
+    padding:90px 8%;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.donate-cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+.donate-cta::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:50%;
+
+    bottom:-120px;
+
+    right:-120px;
+
+}
+
+.donate-cta h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:48px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.donate-cta p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    color:rgba(255,255,255,.9);
+
+    margin-bottom:40px;
+
+}
+
+.donate-cta .donate-btn{
+
+    position:relative;
+
+    z-index:2;
+
+    background:#ffffff;
+
+    color:var(--primary);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.donate-cta .donate-btn:hover{
+
+    background:#f8fafc;
+
+    transform:translateY(-6px) scale(1.05);
+
+}
+
+
+
+/* ==========================================
+            SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f1f5f9;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        var(--primary),
+        var(--secondary)
+    );
+
+    border-radius:20px;
+
+}
+
+
+
+/* ==========================================
+            SECTION SPACING
+========================================== */
+
+.why-donate,
+.impact-section,
+.help-section,
+.donation-form,
+.faq-section{
+
+    position:relative;
+
+}
+
+.why-donate::after,
+.impact-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:rgba(22,163,74,.05);
+
+    top:40px;
+
+    right:40px;
+
+}
+
+
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    section{
+
+        padding:70px 6%;
+
+    }
+
+    .hero-content h1{
+
+        font-size:50px;
+
+    }
+
+    .section-title h2{
+
+        font-size:38px;
+
+    }
+
+    .donate-cta h2{
+
+        font-size:38px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .donate-hero{
+
+        height:85vh;
+
+    }
+
+    .hero-content h1{
+
+        font-size:38px;
+
+    }
+
+    .hero-content p{
+
+        font-size:17px;
+
+    }
+
+    .section-title h2{
+
+        font-size:32px;
+
+    }
+
+    .section-title p{
+
+        font-size:16px;
+
+    }
+
+    .why-grid,
+    .impact-grid,
+    .help-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .donation-form form{
+
+        padding:30px;
+
+    }
+
+    .donate-cta h2{
+
+        font-size:32px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    section{
+
+        padding:60px 5%;
+
+    }
+
+    .hero-content h1{
+
+        font-size:30px;
+
+    }
+
+    .hero-content p{
+
+        font-size:15px;
+
+        line-height:1.7;
+
+    }
+
+    .donate-btn{
+
+        width:100%;
+
+        padding:16px;
+
+    }
+
+    .section-title h2{
+
+        font-size:28px;
+
+    }
+
+    .why-card,
+    .impact-card{
+
+        padding:30px 22px;
+
+    }
+
+    .impact-card h3{
+
+        font-size:40px;
+
+    }
+
+    .donation-form form{
+
+        padding:22px;
+
+    }
+
+    .faq-container summary{
+
+        font-size:16px;
+
+        padding:18px 20px;
+
+    }
+
+    .faq-container details p{
+
+        padding:0 20px 20px;
+
+    }
+
+}
+
+
+
+/* ==========================================
+            SMOOTH CARD EFFECT
+========================================== */
+
+.why-card,
+.impact-card,
+.help-grid div,
+.donation-form form,
+.faq-container details{
+
+    transition:all .35s ease;
+
+}
+
+
+
+/* ==========================================
+            IMAGE STYLE
+========================================== */
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+    border-radius:18px;
+
+}
+
+
+
+/* ==========================================
+            END
+========================================== */
+
+/*=========================================
+        EQUIPMENT DONATION
+=========================================*/
+
+.equipment-donation{
+
+    background:#f8fafc;
+
+}
+
+.equipment-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.equipment-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border:1px solid #ecf0f1;
+
+}
+
+.equipment-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 50px rgba(22,163,74,.18);
+
+    border-color:#16a34a;
+
+}
+
+.equipment-icon{
+
+    width:85px;
+
+    height:85px;
+
+    margin:auto;
+
+    margin-bottom:22px;
+
+    background:#dcfce7;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:38px;
+
+}
+
+.equipment-card h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.equipment-card p{
+
+    color:#6b7280;
+
+    line-height:1.8;
+
+}
+
+.equipment-note{
+
+    margin-top:70px;
+
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:50px;
+
+    border-radius:25px;
+
+}
+
+.equipment-note h3{
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+}
+
+.equipment-note p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.equipment-note .donate-btn{
+
+    background:#fff;
+
+    color:#16a34a;
+
+}
+
+.equipment-note .donate-btn:hover{
+
+    background:#f8fafc;
+
+}
