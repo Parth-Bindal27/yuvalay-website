@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Yuvalay Makerspace</title>
+    <meta name="description" content="Discover the innovation, robotics, AI, makerspace, and community stories of Yuvalay Makerspace through a premium gallery experience.">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../../components/navbar.css">
+    <link rel="stylesheet" href="../home/live-notification.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="../../components/footer.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="/index.html" class="logo">
+                    <img src="../../images/logo.png" alt="Yuvalay Logo">
+                </a>
+            </div>
+            <div class="nav-center" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about.html" class="dropdown-toggle">
+                            About
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="who-we-are.html">Who We Are</a></li>
+                            <li><a href="our-story.html">Our Story</a></li>
+                            <li><a href="mission.html">Mission & Vision</a></li>
+                            <li><a href="timeline.html">Innovation Journey</a></li>
+                            <li><a href="facilities.html">Facilities</a></li>
+                            <li><a href="community.html">Community</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="../support/support.html">Support</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../events/events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="../support/contact.html">Contact</a></li>
+                    <li class="mobile-donate"><a href="#" class="donate-btn">Donate</a></li>
+                </ul>
+            </div>
+            <div class="nav-right"><a href="#" class="donate-btn">Donate</a></div>
+            <div class="hamburger" id="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <div class="live-notification">
+        <span class="live-dot"></span>
+        <div class="live-news">
+            <span class="live-text" id="liveText">Live Update: Youth Innovation Fest 2026 is now open for registrations.</span>
+        </div>
+    </div>
+
+    <main class="gallery-page">
+        <section class="gallery-hero" aria-label="Gallery hero section">
+            <div class="gallery-hero-slide gallery-hero-slide-active" data-image="images/gallery/workshop-01.jpg" data-title="Capturing Innovation" data-subtitle="Every frame holds a story of makers, builders, and bold ideas."></div>
+            <div class="gallery-hero-slide" data-image="images/gallery/robotics-01.jpg" data-title="Designing the Future" data-subtitle="Robotics, AI, and prototyping come together in brave new ways."></div>
+            <div class="gallery-hero-slide" data-image="images/gallery/ai-01.jpg" data-title="Celebrating Creativity" data-subtitle="From classrooms to challenge labs, creativity becomes impact."></div>
+
+            <div class="gallery-hero-overlay"></div>
+            <div class="gallery-container gallery-hero-content">
+                <div class="gallery-hero-copy">
+                    <p class="gallery-eyebrow">Yuvalay Gallery</p>
+                    <h1>Capturing Innovation.<br>Celebrating Creativity.</h1>
+                    <p>Explore a premium collection of moments from robotics labs, leadership programs, hackathons, community experiences, and makerspace innovation.</p>
+                    <div class="gallery-hero-actions">
+                        <a href="#gallery-grid" class="gallery-btn gallery-btn-primary">Explore gallery</a>
+                        <a href="#gallery-events" class="gallery-btn gallery-btn-ghost">View highlights</a>
+                    </div>
+                </div>
+                <div class="gallery-hero-panel" aria-hidden="true">
+                    <p class="gallery-panel-label">Featured collection</p>
+                    <h2 id="galleryHeroTitle">Capturing Innovation</h2>
+                    <p id="galleryHeroSubtitle">Every frame holds a story of makers, builders, and bold ideas.</p>
+                    <div class="gallery-hero-dots" role="tablist" aria-label="Hero slide navigation">
+                        <button class="gallery-hero-dot gallery-hero-dot-active" type="button" aria-label="Show first slide"></button>
+                        <button class="gallery-hero-dot" type="button" aria-label="Show second slide"></button>
+                        <button class="gallery-hero-dot" type="button" aria-label="Show third slide"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-scroll-indicator"><span></span>Scroll to explore</div>
+        </section>
+
+        <section class="gallery-featured" aria-labelledby="galleryFeaturedTitle">
+            <div class="gallery-container">
+                <div class="gallery-section-heading">
+                    <p class="gallery-eyebrow">Featured gallery</p>
+                    <h2 id="galleryFeaturedTitle">A magazine-style glimpse into the Yuvalay experience.</h2>
+                    <p>From innovation labs to community-led learning, each image reflects the spirit of curiosity, rigor, and impact.</p>
+                </div>
+                <div class="gallery-featured-grid">
+                    <article class="gallery-featured-card gallery-featured-card-large gallery-reveal">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'/%3E" data-src="images/gallery/event-01.jpg" alt="Students and mentors engaged in a collaborative workshop">
+                        <div class="gallery-featured-overlay">
+                            <span>Innovation Lab</span>
+                            <h3>Hands-on learning in motion</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-featured-card gallery-reveal">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'/%3E" data-src="images/gallery/robotics-01.jpg" alt="Robotics project under development">
+                        <div class="gallery-featured-overlay">
+                            <span>Robotics</span>
+                            <h3>Prototype in progress</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-featured-card gallery-reveal">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'/%3E" data-src="images/gallery/ai-01.jpg" alt="AI and data learning experience">
+                        <div class="gallery-featured-overlay">
+                            <span>AI</span>
+                            <h3>Ideas shaped by data</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-featured-card gallery-reveal">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'/%3E" data-src="images/gallery/workshop-01.jpg" alt="Creative workshop session">
+                        <div class="gallery-featured-overlay">
+                            <span>Workshop</span>
+                            <h3>Learning through making</h3>
+                        </div>
+                    </article>
+                    <article class="gallery-featured-card gallery-reveal">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'/%3E" data-src="images/gallery/leadership-01.jpg" alt="Leadership summit moment">
+                        <div class="gallery-featured-overlay">
+                            <span>Leadership</span>
+                            <h3>Confidence in community</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-filters" aria-labelledby="galleryFilterTitle">
+            <div class="gallery-container">
+                <div class="gallery-section-heading">
+                    <p class="gallery-eyebrow">Curated by category</p>
+                    <h2 id="galleryFilterTitle">Browse the full innovation archive.</h2>
+                </div>
+                <div class="gallery-filter-row" role="tablist" aria-label="Gallery filters">
+                    <button class="gallery-filter gallery-filter-active" type="button" data-category="all">All</button>
+                    <button class="gallery-filter" type="button" data-category="innovation">Innovation</button>
+                    <button class="gallery-filter" type="button" data-category="robotics">Robotics</button>
+                    <button class="gallery-filter" type="button" data-category="ai">AI</button>
+                    <button class="gallery-filter" type="button" data-category="iot">IoT</button>
+                    <button class="gallery-filter" type="button" data-category="leadership">Leadership</button>
+                    <button class="gallery-filter" type="button" data-category="events">Events</button>
+                    <button class="gallery-filter" type="button" data-category="community">Community</button>
+                    <button class="gallery-filter" type="button" data-category="hackathons">Hackathons</button>
+                    <button class="gallery-filter" type="button" data-category="makerspace">Makerspace</button>
+                    <button class="gallery-filter" type="button" data-category="competitions">Competitions</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-masonry" id="gallery-grid" aria-labelledby="galleryMasonryTitle">
+            <div class="gallery-container">
+                <div class="gallery-section-heading">
+                    <p class="gallery-eyebrow">Masonry gallery</p>
+                    <h2 id="galleryMasonryTitle">A premium collection of moments and milestones.</h2>
+                </div>
+                <div class="gallery-masonry-grid">
+                    <article class="gallery-masonry-card gallery-reveal" data-category="innovation" data-title="Innovation Studio" data-date="March 2026" data-image="images/gallery/workshop-01.jpg">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='600'/%3E" data-src="images/gallery/workshop-01.jpg" alt="Innovation Studio session at Yuvalay">
+                        <div class="gallery-masonry-info">
+                            <span class="gallery-badge">Innovation</span>
+                            <h3>Innovation Studio</h3>
+                            <p>March 2026</p>
+                        </div>
+                        <button class="gallery-open-btn" type="button" aria-label="Open Innovation Studio image"> <i class="ri-search-eye-line"></i></button>
+                    </article>
+                    <article class="gallery-masonry-card gallery-masonry-card-tall gallery-reveal" data-category="robotics" data-title="Robotics Lab" data-date="February 2026" data-image="images/gallery/robotics-01.jpg">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='1200'/%3E" data-src="images/gallery/robotics-01.jpg" alt="Robotics lab activity">
+                        <div class="gallery-masonry-info">
+                            <span class="gallery-badge">Robotics</span>
+                            <h3>Robotics Lab</h3>
+                            <p>February 2026</p>
+                        </div>
+                        <button class="gallery-open-btn" type="button" aria-label="Open Robotics Lab image"><i class="ri-search-eye-line"></i></button>
+                    </article>
+                    <article class="gallery-masonry-card gallery-reveal" data-category="ai" data-title="AI Workshop" data-date="January 2026" data-image="images/gallery/ai-01.jpg">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='600'/%3E" data-src="images/gallery/ai-01.jpg" alt="AI workshop session">
+                        <div class="gallery-masonry-info">
+                            <span class="gallery-badge">AI</span>
+                            <h3>AI Workshop</h3>
+                            <p>January 2026</p>
+                        </div>
+                        <button class="gallery-open-btn" type="button" aria-label="Open AI Workshop image"><i class="ri-search-eye-line"></i></button>
+                    </article>
+                    <article class="gallery-masonry-card gallery-reveal" data-category="iot" data-title="IoT Buildathon" data-date="December 2025" data-image="images/gallery/iot-01.jpg">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='600'/%3E" data-src="images/gallery/iot-01.jpg" alt="IoT buildathon session">
+                        <div class="gallery-masonry-info">
+                            <span class="gallery-badge">IoT</span>
+                            <h3>IoT Buildathon</h3>
+                            <p>December 2025</p>
+                        </div>
+                        <button class="gallery-open-btn" type="button" aria-label="Open IoT Buildathon image"><i class="ri-search-eye-line"></i></button>
+                    </article>
+                    <article class="gallery-masonry-card gallery-reveal" data-category="leadership" data-title="Leadership Summit" data-date="November 2025" data-image="images/gallery/leadership-01.jpg">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='700'/%3E" data-src="images/gallery/leadership-01.jpg" alt="Leadership summit gathering">
+                        <div class="gallery-masonry-info">
+                            <span class="gallery-badge">Leadership</span>
+                            <h3>Leadership Summit</h3>
+                            <p>November 2025</p>
+                        </div>
+                        <button class="gallery-open-btn" type="button" aria-label="Open Leadership Summit image"><i class="ri-search-eye-line"></i></button>
+                    </article>
+                    <article class="gallery-masonry-card gallery-reveal" data-category="events" data-title="Community Meetup" data-date="October 2025" data-image="images/gallery/event-01.jpg">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='650'/%3E" data-src="images/gallery/event-01.jpg" alt="Community meetup event">
+                        <div class="gallery-masonry-info">
+                            <span class="gallery-badge">Events</span>
+                            <h3>Community Meetup</h3>
+                            <p>October 2025</p>
+                        </div>
+                        <button class="gallery-open-btn" type="button" aria-label="Open Community Meetup image"><i class="ri-search-eye-line"></i></button>
+                    </article>
+                    <article class="gallery-masonry-card gallery-masonry-card-wide gallery-reveal" data-category="hackathons" data-title="Hackathon Finale" data-date="September 2025" data-image="images/gallery/hackathon-01.jpg">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='700'/%3E" data-src="images/gallery/hackathon-01.jpg" alt="Hackathon finale moment">
+                        <div class="gallery-masonry-info">
+                            <span class="gallery-badge">Hackathons</span>
+                            <h3>Hackathon Finale</h3>
+                            <p>September 2025</p>
+                        </div>
+                        <button class="gallery-open-btn" type="button" aria-label="Open Hackathon Finale image"><i class="ri-search-eye-line"></i></button>
+                    </article>
+                    <article class="gallery-masonry-card gallery-reveal" data-category="makerspace" data-title="Makerspace Lab" data-date="August 2025" data-image="images/gallery/makerspace-01.jpg">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='620'/%3E" data-src="images/gallery/makerspace-01.jpg" alt="Makerspace lab view">
+                        <div class="gallery-masonry-info">
+                            <span class="gallery-badge">Makerspace</span>
+                            <h3>Makerspace Lab</h3>
+                            <p>August 2025</p>
+                        </div>
+                        <button class="gallery-open-btn" type="button" aria-label="Open Makerspace Lab image"><i class="ri-search-eye-line"></i></button>
+                    </article>
+                    <article class="gallery-masonry-card gallery-reveal" data-category="competitions" data-title="Design Challenge" data-date="July 2025" data-image="images/gallery/competition-01.jpg">
+                        <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='620'/%3E" data-src="images/gallery/competition-01.jpg" alt="Student competition showcase">
+                        <div class="gallery-masonry-info">
+                            <span class="gallery-badge">Competitions</span>
+                            <h3>Design Challenge</h3>
+                            <p>July 2025</p>
+                        </div>
+                        <button class="gallery-open-btn" type="button" aria-label="Open Design Challenge image"><i class="ri-search-eye-line"></i></button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+            <div class="gallery-lightbox-backdrop" data-close-lightbox="true"></div>
+            <div class="gallery-lightbox-shell" role="dialog" aria-modal="true" aria-label="Gallery preview">
+                <button class="gallery-lightbox-close" type="button" aria-label="Close preview"><i class="ri-close-line"></i></button>
+                <button class="gallery-lightbox-nav gallery-lightbox-prev" type="button" aria-label="Previous image"><i class="ri-arrow-left-s-line"></i></button>
+                <div class="gallery-lightbox-media">
+                    <img id="galleryLightboxImage" src="" alt="">
+                    <div class="gallery-lightbox-caption">
+                        <p id="galleryLightboxBadge">Category</p>
+                        <h3 id="galleryLightboxTitle">Title</h3>
+                        <p id="galleryLightboxMeta">Date</p>
+                    </div>
+                </div>
+                <button class="gallery-lightbox-nav gallery-lightbox-next" type="button" aria-label="Next image"><i class="ri-arrow-right-s-line"></i></button>
+                <div class="gallery-lightbox-thumbs" id="galleryLightboxThumbs"></div>
+                <div class="gallery-lightbox-counter" id="galleryLightboxCounter">1 / 1</div>
+            </div>
+        </div>
+
+        <section class="gallery-videos" aria-labelledby="galleryVideosTitle">
+            <div class="gallery-container">
+                <div class="gallery-section-heading">
+                    <p class="gallery-eyebrow">Featured videos</p>
+                    <h2 id="galleryVideosTitle">Moments from the makerspace and beyond.</h2>
+                </div>
+                <div class="gallery-video-grid">
+                    <article class="gallery-video-card gallery-reveal">
+                        <div class="gallery-video-thumb" data-video-title="MakerLab Highlights" data-video-duration="04:32">
+                            <button class="gallery-video-play" type="button" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <div class="gallery-video-body">
+                            <p class="gallery-video-duration">04:32</p>
+                            <h3>MakerLab Highlights</h3>
+                            <p>Behind-the-scenes of rapid prototyping and community making.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-video-card gallery-reveal">
+                        <div class="gallery-video-thumb" data-video-title="Leadership Summit" data-video-duration="06:10">
+                            <button class="gallery-video-play" type="button" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <div class="gallery-video-body">
+                            <p class="gallery-video-duration">06:10</p>
+                            <h3>Leadership Summit</h3>
+                            <p>Stories of mentorship, reflection, and purposeful growth.</p>
+                        </div>
+                    </article>
+                    <article class="gallery-video-card gallery-reveal">
+                        <div class="gallery-video-thumb" data-video-title="Robotics Challenge" data-video-duration="03:59">
+                            <button class="gallery-video-play" type="button" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                        <div class="gallery-video-body">
+                            <p class="gallery-video-duration">03:59</p>
+                            <h3>Robotics Challenge</h3>
+                            <p>Watch the energy of students across the final build sprint.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-tour" aria-labelledby="galleryTourTitle">
+            <div class="gallery-container">
+                <div class="gallery-tour-card gallery-reveal">
+                    <div class="gallery-tour-copy">
+                        <p class="gallery-eyebrow">360° makerspace tour</p>
+                        <h2 id="galleryTourTitle">Step inside the spaces where ideas become prototypes.</h2>
+                        <p>Explore the workshop zones, collaborative design areas, fabrication stations, and innovation rooms that power Yuvalay’s learning community.</p>
+                        <a href="#" class="gallery-btn gallery-btn-primary">Explore makerspace</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-events" id="gallery-events" aria-labelledby="galleryEventsTitle">
+            <div class="gallery-container">
+                <div class="gallery-section-heading">
+                    <p class="gallery-eyebrow">Event highlights</p>
+                    <h2 id="galleryEventsTitle">A timeline of momentum and community energy.</h2>
+                </div>
+                <div class="gallery-event-list">
+                    <a class="gallery-event-card gallery-reveal" href="#gallery-grid">
+                        <h3>Maker Fest</h3>
+                        <p>Immersive community showcase of innovation and hands-on learning.</p>
+                    </a>
+                    <a class="gallery-event-card gallery-reveal" href="#gallery-grid">
+                        <h3>Robotics Workshop</h3>
+                        <p>Student teams building, testing, and iterating in real time.</p>
+                    </a>
+                    <a class="gallery-event-card gallery-reveal" href="#gallery-grid">
+                        <h3>Drone Workshop</h3>
+                        <p>Design-led exploration of flight, control systems, and experimentation.</p>
+                    </a>
+                    <a class="gallery-event-card gallery-reveal" href="#gallery-grid">
+                        <h3>Hackathon</h3>
+                        <p>Fast-paced problem solving with mentors, judges, and creators.</p>
+                    </a>
+                    <a class="gallery-event-card gallery-reveal" href="#gallery-grid">
+                        <h3>Leadership Summit</h3>
+                        <p>Shaping character, confidence, and purpose through meaningful conversations.</p>
+                    </a>
+                    <a class="gallery-event-card gallery-reveal" href="#gallery-grid">
+                        <h3>Community Events</h3>
+                        <p>Moments of service, collaboration, and shared learning.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-memories" aria-labelledby="galleryMemoriesTitle">
+            <div class="gallery-container">
+                <div class="gallery-section-heading">
+                    <p class="gallery-eyebrow">Wall of memories</p>
+                    <h2 id="galleryMemoriesTitle">Stories told by the people behind the work.</h2>
+                </div>
+                <div class="gallery-marquee" aria-label="Testimonial memories">
+                    <div class="gallery-marquee-track">
+                        <article class="gallery-memory-card">
+                            <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='220'/%3E" data-src="images/gallery/event-01.jpg" alt="Participant memory">
+                            <div>
+                                <h3>Arjun</h3>
+                                <p>“Every workshop felt like a launchpad.”</p>
+                            </div>
+                        </article>
+                        <article class="gallery-memory-card">
+                            <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='220'/%3E" data-src="images/gallery/robotics-01.jpg" alt="Participant memory">
+                            <div>
+                                <h3>Meera</h3>
+                                <p>“The makerspace made ideas feel real.”</p>
+                            </div>
+                        </article>
+                        <article class="gallery-memory-card">
+                            <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='220'/%3E" data-src="images/gallery/ai-01.jpg" alt="Participant memory">
+                            <div>
+                                <h3>Nisha</h3>
+                                <p>“The community made every challenge enjoyable.”</p>
+                            </div>
+                        </article>
+                        <article class="gallery-memory-card">
+                            <img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='220'/%3E" data-src="images/gallery/workshop-01.jpg" alt="Participant memory">
+                            <div>
+                                <h3>Rahul</h3>
+                                <p>“I learned to lead by building together.”</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-instagram" aria-labelledby="galleryInstagramTitle">
+            <div class="gallery-container">
+                <div class="gallery-section-heading">
+                    <p class="gallery-eyebrow">Instagram feed</p>
+                    <h2 id="galleryInstagramTitle">Latest moments from our community.</h2>
+                </div>
+                <div class="gallery-instagram-grid">
+                    <article class="gallery-instagram-card gallery-reveal"><img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'/%3E" data-src="images/gallery/workshop-01.jpg" alt="Instagram post from Yuvalay"></article>
+                    <article class="gallery-instagram-card gallery-reveal"><img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'/%3E" data-src="images/gallery/robotics-01.jpg" alt="Instagram post from Yuvalay"></article>
+                    <article class="gallery-instagram-card gallery-reveal"><img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'/%3E" data-src="images/gallery/event-01.jpg" alt="Instagram post from Yuvalay"></article>
+                    <article class="gallery-instagram-card gallery-reveal"><img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'/%3E" data-src="images/gallery/ai-01.jpg" alt="Instagram post from Yuvalay"></article>
+                    <article class="gallery-instagram-card gallery-reveal"><img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'/%3E" data-src="images/gallery/hackathon-01.jpg" alt="Instagram post from Yuvalay"></article>
+                    <article class="gallery-instagram-card gallery-reveal"><img class="gallery-lazy-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'/%3E" data-src="images/gallery/makerspace-01.jpg" alt="Instagram post from Yuvalay"></article>
+                </div>
+                <div class="gallery-instagram-actions">
+                    <a href="#" class="gallery-btn gallery-btn-primary">Follow on Instagram</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-cta" aria-labelledby="galleryCtaTitle">
+            <div class="gallery-container">
+                <div class="gallery-cta-card gallery-reveal">
+                    <p class="gallery-eyebrow">Join our journey</p>
+                    <h2 id="galleryCtaTitle">Be part of the next chapter of innovation.</h2>
+                    <p>Whether you are visiting, volunteering, or building your next big idea, Yuvalay welcomes you to the movement.</p>
+                    <div class="gallery-hero-actions">
+                        <a href="../events/events.html" class="gallery-btn gallery-btn-primary">Visit events</a>
+                        <a href="../support/contact.html" class="gallery-btn gallery-btn-ghost">Become a volunteer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <img src="../../images/logo.png" class="footer-logo" alt="Yuvalay">
+                <p>Empowering youth through education, innovation, leadership and community service.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p>Email : info@yuvalay.org</p>
+                <p>Phone : +91 98765 43210</p>
+                <p>Vadodara, Gujarat</p>
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-box-line"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Yuvalay. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../components/navbar.js"></script>
+    <script src="../home/live-notification.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
