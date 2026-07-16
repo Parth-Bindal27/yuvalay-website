@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -8,41 +7,592 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About</title>
+    <title>Yuvalay</title>
 
     <!-- Remix Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-          rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"
+    >
 
-    <!-- Components CSS -->
+    <!-- CSS Files -->
     <link rel="stylesheet" href="../../components/navbar.css">
-    <link rel="stylesheet" href="../../components/footer.css">
-
-    <!-- Page CSS -->
+    <link rel="stylesheet" href="../home/live-notification.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="who-we-are.css">
+    <link rel="stylesheet" href="story.css">
+    <link rel="stylesheet" href="mission.css">
+    <link rel="stylesheet" href="timeline.css">
+    <link rel="stylesheet" href="facilities.css">
+    <link rel="stylesheet" href="community.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="cta.css">
+    <link rel="stylesheet" href="../../components/footer.css">
+    
 
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <div id="navbar"></div>
+    <!-- ================= NAVBAR ================= -->
 
-    <!-- Main Content -->
-    <main>
+    <header>
 
-        <h1>About Page</h1>
+        <nav class="navbar">
 
-        <p>This is my about page.</p>
+            <!-- Left -->
 
-    </main>
+            <div class="nav-left">
 
-    <!-- Footer -->
-    <div id="footer"></div>
+                <a href="/index.html" class="logo">
 
-    <!-- Components -->
-    <script src="../../components/navbar-loader.js"></script>
-    <script src="../../components/footer-loader.js"></script>
+                    <img src="../../images/logo.png" alt="Yuvalay Logo">
+
+                </a>
+
+            </div>
+
+            <!-- Center -->
+
+            <div class="nav-center" id="navMenu">
+
+                <ul class="nav-links">
+
+                    <li><a href="/index.html">Home</a></li>
+
+                        <li class="dropdown">
+
+                            <a href="about.html" class="dropdown-toggle">
+
+                                About
+
+                                <i class="ri-arrow-down-s-line"></i>
+
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                <li><a href="who-we-are.html">Who We Are</a></li>
+                                <li><a href="our-story.html">Our Story</a></li>
+                                <li><a href="mission.html">Mission & Vision</a></li>
+                                <li><a href="timeline.html">Innovation Journey</a></li>
+                                <li><a href="facilities.html">Facilities</a></li>
+                                <li><a href="community.html">Community</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="../support/support.html">Support</a></li>
+
+                            </ul>
+
+                        </li>
+
+                    <li><a href="../events/events.html">Events</a></li>
+
+                    <li><a href="../gallery/gallery.html">Gallery</a></li>
+
+                    <li><a href="../support/contact.html">Contact</a></li>
+
+    
+
+                    <!-- Mobile Donate -->
+
+                    <li class="mobile-donate">
+
+                        <a href="#" class="donate-btn">
+
+                            Donate
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Desktop Donate -->
+
+            <div class="nav-right">
+
+                <a href="#" class="donate-btn">
+
+                    Donate
+
+                </a>
+
+            </div>
+
+            <!-- Hamburger -->
+
+            <div class="hamburger" id="hamburger">
+
+                ☰
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= LIVE NOTIFICATION ================= -->
+
+    <div class="live-notification">
+
+        <span class="live-dot"></span>
+
+        <div class="live-news">
+
+            <span class="live-text" id="liveText">
+
+                Live Update: Registrations for Yuvalay Summer Camp 2026 are now open.
+
+            </span>
+
+        </div>
+
+    </div>
+
+<!-- ===================================
+            HERO
+=================================== -->
+
+<section class="mission-hero">
+
+    <div class="mission-container">
+
+        <span class="section-tag">Our Purpose</span>
+
+        <h1>Our Mission</h1>
+
+        <p>
+            At Yuvalay Makerspace, our mission is to empower individuals through
+            innovation, education, creativity, and community engagement. We strive
+            to create an inclusive ecosystem where young minds are encouraged to
+            explore their potential, transform ideas into reality, and become
+            responsible leaders capable of creating meaningful social impact.
+        </p>
+
+    </div>
+
+    <div class="mission-highlights">
+
+        <div class="highlight">
+            <i class="fas fa-lightbulb"></i>
+            <span>Innovation</span>
+        </div>
+
+        <div class="highlight">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Education</span>
+        </div>
+
+        <div class="highlight">
+            <i class="fas fa-users"></i>
+            <span>Community</span>
+        </div>
+
+        <div class="highlight">
+            <i class="fas fa-seedling"></i>
+            <span>Sustainability</span>
+        </div>
+
+    </div>
+
+    <div class="mission-buttons">
+
+        <a href="../events/events.html" class="primary-btn">
+        Explore Programs
+        </a>
+
+        <a href="../support/volunteer.html" class="secondary-btn">
+        Become a Volunteer
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+        WHY WE EXIST
+=================================== -->
+
+<section class="mission-section">
+
+    <div class="mission-container two-column">
+
+        <div class="mission-image">
+            <img src="../../images/about/mission-1.jpg" alt="Students Learning">
+        </div>
+
+        <div class="mission-content">
+
+            <h2>Why We Exist</h2>
+
+            <p>
+                Across communities, countless talented individuals possess brilliant
+                ideas and extraordinary potential. However, many of them lack access
+                to modern learning environments, experienced mentors, advanced
+                technology, practical exposure, and opportunities that enable their
+                talents to flourish.
+            </p>
+
+            <p>
+                Yuvalay was established to bridge this gap by providing a platform
+                where innovation, creativity, education, and collaboration come
+                together. Our purpose is to ensure that every learner has the
+                confidence, resources, and support needed to develop skills that
+                prepare them for the future.
+            </p>
+
+            <p>
+                We believe every individual deserves the opportunity to experiment,
+                learn, create, and contribute regardless of their background or
+                experience.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+        OUR MISSION
+=================================== -->
+
+<section class="mission-section light">
+
+    <div class="mission-container">
+
+        <div class="section-heading">
+
+            <span>What Drives Us</span>
+
+            <h2>Our Core Mission</h2>
+
+        </div>
+
+        <div class="mission-grid">
+
+            <div class="mission-card">
+
+                <h3>Empower Through Education</h3>
+
+                <p>
+                    Deliver accessible, engaging, and practical learning experiences
+                    that help individuals develop technical, creative, and leadership
+                    skills required in today's rapidly changing world.
+                </p>
+
+            </div>
+
+            <div class="mission-card">
+
+                <h3>Promote Innovation</h3>
+
+                <p>
+                    Inspire students and innovators to transform ideas into real-world
+                    solutions by providing hands-on learning, experimentation, and
+                    makerspace resources.
+                </p>
+
+            </div>
+
+            <div class="mission-card">
+
+                <h3>Strengthen Communities</h3>
+
+                <p>
+                    Encourage collaboration between students, educators, industry,
+                    volunteers, and organizations to collectively solve community
+                    challenges and improve lives.
+                </p>
+
+            </div>
+
+            <div class="mission-card">
+
+                <h3>Develop Future Leaders</h3>
+
+                <p>
+                    Build confident individuals who possess empathy, creativity,
+                    problem-solving abilities, and a strong sense of social
+                    responsibility.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+        HOW WE WORK
+=================================== -->
+
+<section class="mission-section">
+
+    <div class="mission-container two-column reverse">
+
+        <div class="mission-content">
+
+            <h2>How We Fulfil Our Mission</h2>
+
+            <p>
+                Our mission is translated into action through carefully designed
+                programs that combine education with practical implementation.
+            </p>
+
+            <ul>
+
+                <li>Technology and innovation workshops</li>
+
+                <li>Hands-on makerspace experiences</li>
+
+                <li>Entrepreneurship and startup mentoring</li>
+
+                <li>Community development initiatives</li>
+
+                <li>Environmental sustainability campaigns</li>
+
+                <li>Skill development and career guidance</li>
+
+                <li>Volunteer-driven social impact projects</li>
+
+                <li>Collaborative innovation challenges</li>
+
+            </ul>
+
+            <p>
+                Every initiative is designed to encourage participants not only to
+                acquire knowledge but also to apply it in solving meaningful
+                real-world challenges.
+            </p>
+
+        </div>
+
+        <div class="mission-image">
+
+            <img src="../../images/about/mission-2.jpg" alt="Innovation">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+        OUR COMMITMENT
+=================================== -->
+
+<section class="commitment">
+
+    <div class="mission-container">
+
+        <div class="section-heading">
+
+            <span>Our Commitment</span>
+
+            <h2>What We Promise</h2>
+
+        </div>
+
+        <div class="commitment-grid">
+
+            <div>
+                <h3>Accessibility</h3>
+                <p>Creating opportunities that are inclusive and accessible for learners from all backgrounds.</p>
+            </div>
+
+            <div>
+                <h3>Innovation</h3>
+                <p>Encouraging curiosity, experimentation, and creative thinking.</p>
+            </div>
+
+            <div>
+                <h3>Integrity</h3>
+                <p>Maintaining transparency, ethics, and accountability in everything we do.</p>
+            </div>
+
+            <div>
+                <h3>Collaboration</h3>
+                <p>Working with institutions, communities, industries, and volunteers for collective growth.</p>
+            </div>
+
+            <div>
+                <h3>Sustainability</h3>
+                <p>Building solutions that create long-term positive impact for society.</p>
+            </div>
+
+            <div>
+                <h3>Empowerment</h3>
+                <p>Helping individuals become confident creators, innovators, and leaders.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+        LONG MESSAGE
+=================================== -->
+
+<section class="mission-message">
+
+    <div class="mission-container">
+
+        <h2>Beyond Innovation, Towards Transformation</h2>
+
+        <p>
+            At Yuvalay, we believe that education is far more than acquiring
+            knowledge—it is about unlocking human potential. True innovation begins
+            when curiosity is encouraged, creativity is nurtured, and individuals
+            are empowered to take meaningful action.
+        </p>
+
+        <p>
+            Our mission extends beyond classrooms and technology. We aim to create a
+            culture where people are inspired to think critically, collaborate
+            openly, embrace challenges, and use their knowledge to improve society.
+            Every workshop, community initiative, innovation challenge, mentoring
+            session, and makerspace activity contributes to building individuals who
+            are not only skilled professionals but also compassionate citizens.
+        </p>
+
+        <p>
+            We envision a future where every young learner has access to
+            opportunities that enable them to dream without limitations, create with
+            confidence, and contribute with purpose. Through innovation,
+            collaboration, and continuous learning, Yuvalay strives to become a
+            catalyst for positive social transformation and sustainable development.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+            QUOTE
+=================================== -->
+
+<section class="mission-quote">
+
+    <div class="mission-container">
+
+        <blockquote>
+
+            "Our mission is not simply to educate minds—it is to inspire innovators,
+            empower communities, nurture leaders, and build a future where every
+            individual has the opportunity to transform ideas into meaningful
+            impact."
+
+        </blockquote>
+
+    </div>
+
+</section>
+
+
+ <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+
+                <img src="../../images/logo.png"
+                     class="footer-logo"
+                     alt="Yuvalay">
+
+                <p>
+
+                    Empowering youth through education,
+                    innovation, leadership and
+                    community service.
+
+                </p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Contact</h3>
+
+                <p>Email : info@yuvalay.org</p>
+
+                <p>Phone : +91 98765 43210</p>
+
+                <p>Vadodara, Gujarat</p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Follow Us</h3>
+
+               <div class="social-links">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="ri-facebook-circle-line"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="ri-linkedin-box-line"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="ri-youtube-line"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Yuvalay. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="../../components/navbar.js"></script>
+    <script src="../home/live-notification.js"></script>
+    <script src="../home/events.js"></script>
+    <script src="../home/impact.js"></script>
 
 </body>
 
