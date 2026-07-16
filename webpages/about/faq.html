@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | Yuvalay Makerspace</title>
+    <meta name="description" content="Find clear answers about Yuvalay Makerspace programs, workshops, membership, volunteering, partnerships, donations, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../components/navbar.css">
+    <link rel="stylesheet" href="../home/live-notification.css">
+    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="../../components/footer.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="../../index.html" class="logo">
+                    <img src="../../images/logo.png" alt="Yuvalay Logo">
+                </a>
+            </div>
+            <div class="nav-center" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about.html" class="dropdown-toggle">
+                            About
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="who-we-are.html">Who We Are</a></li>
+                            <li><a href="our-story.html">Our Story</a></li>
+                            <li><a href="mission.html">Mission & Vision</a></li>
+                            <li><a href="timeline.html">Innovation Journey</a></li>
+                            <li><a href="facilities.html">Facilities</a></li>
+                            <li><a href="community.html">Community</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="../support/support.html">Support</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../events/events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="../support/contact.html">Contact</a></li>
+                    <li class="mobile-donate"><a href="#" class="donate-btn">Donate</a></li>
+                </ul>
+            </div>
+            <div class="nav-right"><a href="#" class="donate-btn">Donate</a></div>
+            <div class="hamburger" id="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <div class="live-notification">
+        <span class="live-dot"></span>
+        <div class="live-news">
+            <span class="live-text" id="liveText">Live Update: Yuvalay summer innovation labs are now accepting applications.</span>
+        </div>
+    </div>
+
+    <main class="faq-page">
+        <section class="faq-hero" aria-labelledby="faqHeroTitle">
+            <div class="faq-container">
+                <div class="faq-hero-copy">
+                    <p class="faq-eyebrow">Yuvalay Support Center</p>
+                    <h1 id="faqHeroTitle">Frequently asked questions</h1>
+                    <p>Explore clear answers about learning programs, maker culture, workshops, volunteering, partnerships and the community experience at Yuvalay Makerspace.</p>
+                    <label class="faq-search" for="faqSearch">
+                        <span class="faq-search-label">Search support topics</span>
+                        <div class="faq-search-shell">
+                            <i class="ri-search-line faq-search-icon"></i>
+                            <input id="faqSearch" type="search" placeholder="Try “robotics”, “fees”, or “volunteer”" autocomplete="off">
+                        </div>
+                    </label>
+                </div>
+                <div class="faq-card faq-hero-card" aria-label="Support highlights">
+                    <p class="faq-card-label">What you can discover</p>
+                    <ul class="faq-hero-list">
+                        <li><i class="ri-checkbox-circle-line"></i> Program details and age guidance</li>
+                        <li><i class="ri-checkbox-circle-line"></i> Workshop schedules and registration</li>
+                        <li><i class="ri-checkbox-circle-line"></i> Support for schools, partners and volunteers</li>
+                    </ul>
+                    <a class="faq-button faq-button-primary" href="#faqAnswers">Browse answers</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-categories" aria-labelledby="faqCategoriesTitle">
+            <div class="faq-container">
+                <div class="faq-section-heading">
+                    <p class="faq-eyebrow">Quick categories</p>
+                    <h2 id="faqCategoriesTitle">Choose the audience or topic you need help with.</h2>
+                </div>
+                <div class="faq-category-grid">
+                    <button class="faq-category faq-category-active" type="button" data-category="all">All Topics</button>
+                    <button class="faq-category" type="button" data-category="students">Students</button>
+                    <button class="faq-category" type="button" data-category="parents">Parents</button>
+                    <button class="faq-category" type="button" data-category="teachers">Teachers</button>
+                    <button class="faq-category" type="button" data-category="volunteers">Volunteers</button>
+                    <button class="faq-category" type="button" data-category="partners">Partners</button>
+                    <button class="faq-category" type="button" data-category="events">Events</button>
+                    <button class="faq-category" type="button" data-category="programs">Programs</button>
+                    <button class="faq-category" type="button" data-category="general">General</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-answers" id="faqAnswers" aria-labelledby="faqAnswersTitle">
+            <div class="faq-container">
+                <div class="faq-section-heading">
+                    <p class="faq-eyebrow">Support library</p>
+                    <h2 id="faqAnswersTitle">Every question you might have, answered clearly.</h2>
+                    <p id="faqResultCount" aria-live="polite">Showing 0 of 45 questions</p>
+                </div>
+                <div class="faq-grid" role="list">
+                    <article class="faq-item faq-item-is-visible" data-category="general" data-search="who can join students parents teachers volunteers mentors partners">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Who can join Yuvalay?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yuvalay welcomes students, parents, teachers, volunteers, mentors, aspiring innovators and partner organizations. We create space for curious minds from school, college and community ecosystems.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="general" data-search="age criteria minimum age maximum age students join">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Is there an age limit to participate?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We support a broad age range, from school students to young professionals. Some programs are designed for specific age groups, and we mention those details clearly during registration.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="general" data-search="membership fee registration annual membership">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Do I need to become a member to attend a workshop?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most workshops and public programs can be attended without a formal membership. For recurring access, long-term learning tracks and special community benefits, membership options are available.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="programs" data-search="programs what programs offered robotics ai 3d printing leadership">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>What kinds of programs does Yuvalay offer?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We offer innovation labs, robotics journeys, AI learning experiences, 3D printing sessions, leadership development programs, maker challenges and community service initiatives.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="programs" data-search="certificate completion certificate provided after workshop">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Are certificates provided after completing a program?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Learners who complete the required participation criteria receive certificates, and some programs also include badges or project-based acknowledgment.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="programs" data-search="fees cost workshop registration fee amount">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>How much do the programs cost?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Program fees vary by format, duration and materials used. We share the complete fee structure before registration so families and institutions can plan easily.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="workshops" data-search="workshop schedule timing frequency daily weekly monthly">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>How often do workshops happen?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Workshops are scheduled regularly throughout the year, with weekend, weekday and holiday options depending on the program theme and participant needs.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="workshops" data-search="workshop beginner beginner friendly no experience required">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Do I need prior experience to join a workshop?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No prior experience is required for most beginner-friendly workshops. Our facilitators guide learners step by step with hands-on exposure and support.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="innovation" data-search="innovation what is innovation learning maker culture creativity">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>How is Yuvalay different from a regular learning center?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yuvalay blends education, innovation, leadership and maker culture into one experience. Students learn by building, testing, collaborating and reflecting on real-world ideas.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="robotics" data-search="robotics robotics club competition school robotics">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Does Yuvalay offer robotics programs for schools?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. We offer robotics learning journeys for schools and student groups, including curriculum-linked modules and challenge-based exploration.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="ai" data-search="artificial intelligence ai program machine learning explanation">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Are AI programs available for beginners?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely. Our AI programs are designed to introduce concepts in an approachable way, using practical exercises and engaging projects instead of heavy theory alone.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="iot" data-search="iot internet of things devices smart systems maker labs">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Do you run IoT or connected devices programs?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Our innovation programs often include IoT-based prototyping and connected systems, enabling participants to design responsive solutions and smart experiments.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="programs" data-search="3d printing print filament materials availability">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Can I use 3D printing facilities during a session?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Access depends on the program and the session plan. We provide information about machine availability, design support and material usage before each activity.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="leadership" data-search="leadership development character confidence purpose">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Is leadership training part of the learning experience?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Leadership is woven into many of our programs. Participants develop communication, collaboration, empathy and initiative through structured activities and reflection.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="volunteers" data-search="volunteer volunteering opportunities support community">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>How can I volunteer with Yuvalay?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Volunteers can contribute through event support, mentoring, workshop assistance, outreach and operational help. We invite interested individuals to contact us with their background and availability.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="events" data-search="events upcoming event schedule calendar">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>How can I stay updated about upcoming events?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We publish updates through our website, email communications and social channels. You can also subscribe to our newsletter for regular event announcements.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="events" data-search="competition hackathon innovation challenge student projects">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Do you organize competitions or hacks?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Yuvalay regularly hosts innovation challenges, maker competitions and hackathon-style experiences designed to encourage creativity and practical problem solving.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="students" data-search="student projects can students showcase projects">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Can students present their own projects?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. We encourage students to develop and share their own concepts, prototypes and outcomes through showcases, exhibitions and portfolio-friendly learning pathways.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="students" data-search="internship career opportunities youth jobs mentorship internship">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Are internships or career opportunities available?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We occasionally collaborate on internships, mentorship and exposure opportunities for learners who show strong interest in innovation, technology and community projects.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="parents" data-search="parents child safe environment learning support">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>How does Yuvalay ensure a safe learning environment for children?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We maintain structured facilitation, guided supervision, clear conduct expectations and a supportive environment that promotes learning, curiosity and respect.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="teachers" data-search="teachers school visits curriculum partnership school program">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Can schools request a visit or workshop session?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. We welcome school visits, educational workshops and collaborative sessions for students, teachers and institutional teams.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="partners" data-search="industry collaboration corporate partner organization partnership">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Can organizations collaborate with Yuvalay?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. We collaborate with industry, education and civic organizations to create programs, innovation experiences and meaningful outreach opportunities.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="partnerships" data-search="csr corporate social responsibility donation partnership support">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Does Yuvalay support CSR or social impact partnerships?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. We partner with organizations interested in educational impact, community development, innovation outreach and long-term social value creation.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="donations" data-search="donations support contribution fundraiser donate">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Can I donate to support Yuvalay’s work?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Contributions help expand learning opportunities, community programming, workshops and innovation resources. We are happy to share details about giving support.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="contact" data-search="contact email phone location address visit centre center">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>How can I contact Yuvalay?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can reach us by email, phone or by visiting our center in Vadodara. We are happy to assist with general inquiries, registrations and partnership conversations.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="general" data-search="location address vadodara opening hours visit center">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Where is Yuvalay located and what are the opening hours?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yuvalay is based in Vadodara, Gujarat. Program timings vary by activity, and our team can provide the most current hours for your intended visit.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="general" data-search="parking available parking facilities transport">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Is parking available for visitors?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Visitor parking availability depends on the event or session schedule. We recommend reaching out in advance if you plan to visit with a group.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="events" data-search="photography photos recording during workshop event">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Can photography or recording take place during programs?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Photography and videography policies vary by event. We share relevant permissions and guidelines before the program begins, especially for public or community events.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="partnerships" data-search="college visit university student exchange workshop">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Do you host college or university visits?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. We host visits, talks and collaboration sessions for colleges and educational institutions interested in innovation and maker-led learning.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="partners" data-search="industry collaboration mentor experts professionals support">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Can professionals mentor or collaborate with Yuvalay?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Professionals and experts can contribute as mentors, judges, advisors or session facilitators based on their field and availability.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="general" data-search="makerspace facilities labs tools equipment">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>What can I expect from the makerspace experience?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The makerspace experience is hands-on, collaborative and practical. Participants work with tools, prototyping ideas and creative problem-solving in a guided environment.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="students" data-search="group participation family members can bring sibling friend">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>Can I attend with a friend or family member?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Participation policies vary by program. Some activities are open to individuals, while others are best suited for groups or family learners. We recommend checking the specific session details.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="events" data-search="register registration online form how to register">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>How do I register for an event or program?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Registration is typically completed through the event page or by contacting us directly. We share booking steps, deadlines and requirements clearly before confirmation.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="general" data-search="support help need support contact support team">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>What if I need help after reading the FAQs?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We invite you to contact our team directly for personalized support. We are happy to help with registrations, program questions, venue visits and partnership planning.</p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item faq-item-is-visible" data-category="general" data-search="newsletter subscribe updates email news">
+                        <button class="faq-question" type="button" aria-expanded="false">
+                            <span>How can I receive updates from Yuvalay?</span>
+                            <span class="faq-icon"><i class="ri-add-line"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can subscribe to our newsletter to receive updates on new programs, upcoming events, learning opportunities and community stories.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-help" aria-labelledby="faqHelpTitle">
+            <div class="faq-container">
+                <div class="faq-card faq-help-card">
+                    <div class="faq-help-copy">
+                        <p class="faq-eyebrow">Still need help?</p>
+                        <h2 id="faqHelpTitle">Our team is ready to guide you.</h2>
+                        <p>Whether you need advice on a program, want to visit the centre or are planning a partnership, we are here to support you.</p>
+                    </div>
+                    <div class="faq-help-actions">
+                        <a class="faq-button faq-button-primary" href="mailto:info@yuvalay.org">Email us</a>
+                        <a class="faq-button faq-button-secondary" href="tel:+919876543210">Call now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-newsletter" aria-labelledby="faqNewsletterTitle">
+            <div class="faq-container">
+                <div class="faq-card faq-newsletter-card">
+                    <div>
+                        <p class="faq-eyebrow">Stay in the loop</p>
+                        <h2 id="faqNewsletterTitle">Receive the latest stories, events and opportunities.</h2>
+                        <p>Join our newsletter for thoughtful updates from the Yuvalay community.</p>
+                    </div>
+                    <form class="faq-newsletter-form">
+                        <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+                        <button class="faq-button faq-button-primary" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <img src="../../images/logo.png" class="footer-logo" alt="Yuvalay">
+                <p>Empowering youth through education, innovation, leadership and community service.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="../events/events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="../support/support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p>Email : info@yuvalay.org</p>
+                <p>Phone : +91 98765 43210</p>
+                <p>Vadodara, Gujarat</p>
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-box-line"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Yuvalay. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../components/navbar.js"></script>
+    <script src="../home/live-notification.js"></script>
+    <script src="faq.js"></script>
+</body>
+</html>

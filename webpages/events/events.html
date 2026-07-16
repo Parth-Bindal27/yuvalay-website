@@ -1,34 +1,510 @@
-<!-- ================= UPCOMING EVENTS ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Yuvalay Makerspace</title>
+    <meta name="description" content="Discover the upcoming workshops, robotics experiences, AI labs, leadership programs, and innovation events hosted by Yuvalay Makerspace.">
+    <link rel="stylesheet" href="../../components/navbar.css">
+    <link rel="stylesheet" href="../home/live-notification.css">
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="../../components/footer.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="../../index.html" class="logo">
+                    <img src="../../images/logo.png" alt="Yuvalay Logo">
+                </a>
+            </div>
+            <div class="nav-center" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="../about/about.html" class="dropdown-toggle">
+                            About
+                            <i class="ri-arrow-down-s-line"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../about/who-we-are.html">Who We Are</a></li>
+                            <li><a href="../about/our-story.html">Our Story</a></li>
+                            <li><a href="../about/mission.html">Mission & Vision</a></li>
+                            <li><a href="../about/timeline.html">Innovation Journey</a></li>
+                            <li><a href="../about/facilities.html">Facilities</a></li>
+                            <li><a href="../about/community.html">Community</a></li>
+                            <li><a href="../about/gallery.html">Gallery</a></li>
+                            <li><a href="../about/faq.html">FAQs</a></li>
+                            <li><a href="../support/support.html">Support</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="../about/gallery.html">Gallery</a></li>
+                    <li><a href="../support/contact.html">Contact</a></li>
+                    <li class="mobile-donate"><a href="#" class="donate-btn">Donate</a></li>
+                </ul>
+            </div>
+            <div class="nav-right"><a href="#" class="donate-btn">Donate</a></div>
+            <div class="hamburger" id="hamburger">☰</div>
+        </nav>
+    </header>
 
-<section class="events">
-
-    <div class="events-header">
-
-        <span class="events-tag">
-            What's Happening
-        </span>
-
-        <h2>
-            Upcoming Events & Opportunities
-        </h2>
-
-        <p>
-            Discover our latest events, workshops, community drives, and
-            volunteer opportunities. Be a part of the change.
-        </p>
-
+    <div class="live-notification">
+        <span class="live-dot"></span>
+        <div class="live-news">
+            <span class="live-text" id="liveText">Live update: Innovation labs and mentor sessions are now open for registration.</span>
+        </div>
     </div>
 
-    <!-- JavaScript yaha cards banayega -->
+    <main class="events-page">
+        <section class="events-hero" aria-labelledby="eventsHeroTitle">
+            <div class="events-hero-slider">
+                <div class="events-hero-slide events-hero-slide-active" data-image="../../images/events/event1.png"></div>
+                <div class="events-hero-slide" data-image="../../images/events/event2.png"></div>
+                <div class="events-hero-slide" data-image="../../images/events/event3.png"></div>
+            </div>
+            <div class="events-hero-overlay"></div>
+            <div class="events-container events-hero-layout">
+                <div class="events-hero-content">
+                    <p class="events-eyebrow">Yuvalay Events</p>
+                    <h1 id="eventsHeroTitle">Experience innovation through events.</h1>
+                    <p>Every gathering at Yuvalay is designed to inspire students, educators, mentors and partners through hands-on learning, storytelling and bold ideas.</p>
+                    <div class="events-hero-actions">
+                        <a class="events-register events-register-primary" href="#eventsFeatured">Upcoming events</a>
+                        <a class="events-register events-register-ghost" href="#eventsPast">Past events</a>
+                    </div>
+                    <div class="events-hero-dots" aria-label="Hero slide navigation">
+                        <button class="events-hero-dot events-hero-dot-active" type="button" aria-label="Show first slide"></button>
+                        <button class="events-hero-dot" type="button" aria-label="Show second slide"></button>
+                        <button class="events-hero-dot" type="button" aria-label="Show third slide"></button>
+                    </div>
+                </div>
+                <div class="events-card events-hero-panel">
+                    <p class="events-card-label">Next highlight</p>
+                    <h2 id="eventsHeroPanelTitle">Build, Learn, Lead</h2>
+                    <p id="eventsHeroPanelCopy">A hands-on experience for young innovators and future makers.</p>
+                    <ul class="events-hero-list">
+                        <li><span>•</span> Robotics & AI workshops</li>
+                        <li><span>•</span> Design thinking labs</li>
+                        <li><span>•</span> Community impact showcases</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <div class="events-grid" id="eventsGrid"></div>
+        <section class="events-counter" aria-labelledby="eventsCounterTitle">
+            <div class="events-container">
+                <div class="events-section-heading">
+                    <p class="events-eyebrow">Countdown</p>
+                    <h2 id="eventsCounterTitle">The next signature event begins in</h2>
+                </div>
+                <div class="events-counter-grid">
+                    <div class="events-card events-counter-card">
+                        <span class="events-counter-value" data-target="12">0</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="events-card events-counter-card">
+                        <span class="events-counter-value" data-target="08">0</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="events-card events-counter-card">
+                        <span class="events-counter-value" data-target="35">0</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="events-card events-counter-card">
+                        <span class="events-counter-value" data-target="18">0</span>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="events-footer">
+        <section class="events-featured" id="eventsFeatured" aria-labelledby="eventsFeaturedTitle">
+            <div class="events-container">
+                <div class="events-section-heading">
+                    <p class="events-eyebrow">Featured event</p>
+                    <h2 id="eventsFeaturedTitle">The Maker Lab Summit</h2>
+                </div>
+                <div class="events-card events-featured-card">
+                    <img class="events-image" src="../../images/events/event1.png" alt="Students participating in the Maker Lab Summit">
+                    <div class="events-content">
+                        <div class="events-featured-meta">
+                            <span>October 18, 2026</span>
+                            <span>Vadodara Innovation Hub</span>
+                            <span>09:30 AM</span>
+                        </div>
+                        <h3>Design, prototype and present your next big idea.</h3>
+                        <p>A full-day experience combining robotics, AI, rapid prototyping, public speaking and peer mentorship in a premium maker environment.</p>
+                        <div class="events-featured-footer">
+                            <div>
+                                <p class="events-meta-label">Speaker</p>
+                                <p class="events-meta-value">Aarav Patel · Product Designer</p>
+                            </div>
+                            <div class="events-featured-actions">
+                                <a class="events-register events-register-primary" href="#">Register now</a>
+                                <a class="events-register events-register-secondary" href="#">Add to calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <a href="events.html" class="view-events-btn">
-            View All Events →
-        </a>
+        <section class="events-upcoming" aria-labelledby="eventsUpcomingTitle">
+            <div class="events-container">
+                <div class="events-section-heading">
+                    <p class="events-eyebrow">Upcoming events</p>
+                    <h2 id="eventsUpcomingTitle">Curated experiences for curiosity and collaboration.</h2>
+                </div>
+                <div class="events-filter" role="tablist" aria-label="Event filters">
+                    <button class="events-filter-pill events-filter-active" type="button" data-category="all">All</button>
+                    <button class="events-filter-pill" type="button" data-category="workshops">Workshops</button>
+                    <button class="events-filter-pill" type="button" data-category="ai">AI</button>
+                    <button class="events-filter-pill" type="button" data-category="robotics">Robotics</button>
+                    <button class="events-filter-pill" type="button" data-category="iot">IoT</button>
+                    <button class="events-filter-pill" type="button" data-category="leadership">Leadership</button>
+                    <button class="events-filter-pill" type="button" data-category="hackathons">Hackathons</button>
+                    <button class="events-filter-pill" type="button" data-category="community">Community</button>
+                </div>
+                <div class="events-grid">
+                    <article class="events-card events-upcoming-card" data-category="workshops">
+                        <img class="events-image" src="../../images/events/event2.png" alt="Hands-on workshop session">
+                        <div class="events-content">
+                            <p class="events-pill">Workshop</p>
+                            <h3>Prototype Lab Weekend</h3>
+                            <p>Rapid ideation, model building and feedback in a collaborative studio setting.</p>
+                            <div class="events-meta"><span>Aug 24</span><span>24 seats</span><span>2 hrs</span></div>
+                            <a class="events-register events-register-primary" href="#">Reserve seat</a>
+                        </div>
+                    </article>
+                    <article class="events-card events-upcoming-card" data-category="ai">
+                        <img class="events-image" src="../../images/events/event3.png" alt="AI learning experience">
+                        <div class="events-content">
+                            <p class="events-pill">AI</p>
+                            <h3>AI for Creative Builders</h3>
+                            <p>Understand generative AI, prompt design and practical applications through live demos.</p>
+                            <div class="events-meta"><span>Sep 06</span><span>18 seats</span><span>90 mins</span></div>
+                            <a class="events-register events-register-primary" href="#">Reserve seat</a>
+                        </div>
+                    </article>
+                    <article class="events-card events-upcoming-card" data-category="robotics">
+                        <img class="events-image" src="../../images/events/event1.png" alt="Robotics challenge event">
+                        <div class="events-content">
+                            <p class="events-pill">Robotics</p>
+                            <h3>Autonomous Bot Sprint</h3>
+                            <p>Build, code and test your own autonomous prototype in a team-based challenge.</p>
+                            <div class="events-meta"><span>Sep 20</span><span>16 seats</span><span>3 hrs</span></div>
+                            <a class="events-register events-register-primary" href="#">Reserve seat</a>
+                        </div>
+                    </article>
+                    <article class="events-card events-upcoming-card" data-category="iot">
+                        <img class="events-image" src="../../images/events/event2.png" alt="IoT prototyping lab">
+                        <div class="events-content">
+                            <p class="events-pill">IoT</p>
+                            <h3>Smart Systems Lab</h3>
+                            <p>Connect sensors, create responsive systems and understand the internet of things.</p>
+                            <div class="events-meta"><span>Oct 02</span><span>12 seats</span><span>2 hrs</span></div>
+                            <a class="events-register events-register-primary" href="#">Reserve seat</a>
+                        </div>
+                    </article>
+                    <article class="events-card events-upcoming-card" data-category="leadership">
+                        <img class="events-image" src="../../images/events/event3.png" alt="Leadership program">
+                        <div class="events-content">
+                            <p class="events-pill">Leadership</p>
+                            <h3>Lead with Clarity</h3>
+                            <p>Develop communication, reflection and confidence through an interactive leadership session.</p>
+                            <div class="events-meta"><span>Oct 12</span><span>30 seats</span><span>75 mins</span></div>
+                            <a class="events-register events-register-primary" href="#">Reserve seat</a>
+                        </div>
+                    </article>
+                    <article class="events-card events-upcoming-card" data-category="hackathons">
+                        <img class="events-image" src="../../images/events/event1.png" alt="Hackathon event">
+                        <div class="events-content">
+                            <p class="events-pill">Hackathon</p>
+                            <h3>Future Tech Hack</h3>
+                            <p>Join a focused innovation sprint where teams solve a real challenge in one evening.</p>
+                            <div class="events-meta"><span>Nov 09</span><span>40 seats</span><span>4 hrs</span></div>
+                            <a class="events-register events-register-primary" href="#">Reserve seat</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    </div>
+        <section class="events-past" id="eventsPast" aria-labelledby="eventsPastTitle">
+            <div class="events-container">
+                <div class="events-section-heading">
+                    <p class="events-eyebrow">Past events</p>
+                    <h2 id="eventsPastTitle">A journey of milestones, learning and community impact.</h2>
+                </div>
+                <div class="events-timeline">
+                    <article class="events-card events-timeline-card">
+                        <img class="events-image" src="../../images/events/event2.png" alt="Youth innovation showcase">
+                        <div class="events-content">
+                            <p class="events-pill">Community showcase</p>
+                            <h3>Youth Innovation Showcase</h3>
+                            <p>Students shared prototypes, stories and feedback in front of mentors, families and partners.</p>
+                            <div class="events-timeline-footer">
+                                <span>Gallery</span>
+                                <span>Certificates</span>
+                                <span>Videos</span>
+                            </div>
+                            <a class="events-register events-register-secondary" href="#">Read more</a>
+                        </div>
+                    </article>
+                    <article class="events-card events-timeline-card">
+                        <img class="events-image" src="../../images/events/event3.png" alt="Leadership exchange program">
+                        <div class="events-content">
+                            <p class="events-pill">Leadership</p>
+                            <h3>Leadership Exchange Lab</h3>
+                            <p>A reflective program where emerging leaders explored collaboration, empathy and community action.</p>
+                            <div class="events-timeline-footer">
+                                <span>Photos</span>
+                                <span>Highlights</span>
+                                <span>Stories</span>
+                            </div>
+                            <a class="events-register events-register-secondary" href="#">Read more</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-</section>
+        <section class="events-speakers" aria-labelledby="eventsSpeakersTitle">
+            <div class="events-container">
+                <div class="events-section-heading">
+                    <p class="events-eyebrow">Guest speakers</p>
+                    <h2 id="eventsSpeakersTitle">Learn from mentors shaping the future of innovation.</h2>
+                </div>
+                <div class="events-grid events-speaker-grid">
+                    <article class="events-card events-speaker-card">
+                        <img class="events-speaker-image" src="../../images/events/event1.png" alt="Portrait of Meera Shah">
+                        <h3>Meera Shah</h3>
+                        <p class="events-speaker-role">Design Strategist</p>
+                        <p class="events-speaker-company">Studio North</p>
+                        <p>Meera mentors young innovators around user-centered design and bold storytelling.</p>
+                    </article>
+                    <article class="events-card events-speaker-card">
+                        <img class="events-speaker-image" src="../../images/events/event2.png" alt="Portrait of Rahul Verma">
+                        <h3>Rahul Verma</h3>
+                        <p class="events-speaker-role">Robotics Engineer</p>
+                        <p class="events-speaker-company">Nova Labs</p>
+                        <p>Rahul helps participants turn concepts into working systems through practical problem solving.</p>
+                    </article>
+                    <article class="events-card events-speaker-card">
+                        <img class="events-speaker-image" src="../../images/events/event3.png" alt="Portrait of Nisha Menon">
+                        <h3>Nisha Menon</h3>
+                        <p class="events-speaker-role">AI Educator</p>
+                        <p class="events-speaker-company">FutureLoop</p>
+                        <p>Nisha creates approachable learning experiences that make advanced technology feel exciting and real.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-gallery" aria-labelledby="eventsGalleryTitle">
+            <div class="events-container">
+                <div class="events-section-heading">
+                    <p class="events-eyebrow">Event gallery preview</p>
+                    <h2 id="eventsGalleryTitle">Moments captured from our most memorable gatherings.</h2>
+                </div>
+                <div class="events-gallery-grid">
+                    <img class="events-gallery-item" src="../../images/events/event1.png" alt="Yuvalay event atmosphere">
+                    <img class="events-gallery-item events-gallery-tall" src="../../images/events/event2.png" alt="Community event showcase">
+                    <img class="events-gallery-item" src="../../images/events/event3.png" alt="Student engagement in event hall">
+                    <img class="events-gallery-item" src="../../images/events/event1.png" alt="Young innovators presenting ideas">
+                    <img class="events-gallery-item events-gallery-wide" src="../../images/events/event2.png" alt="Open workshop environment">
+                </div>
+                <div class="events-gallery-actions">
+                    <a class="events-register events-register-primary" href="#">View full gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-stats" aria-labelledby="eventsStatsTitle">
+            <div class="events-container">
+                <div class="events-section-heading">
+                    <p class="events-eyebrow">Impact by the numbers</p>
+                    <h2 id="eventsStatsTitle">A growing community of learners and builders.</h2>
+                </div>
+                <div class="events-stats-grid">
+                    <div class="events-card events-stats-card">
+                        <span class="events-counter-value" data-target="180">0</span>
+                        <p>Events conducted</p>
+                    </div>
+                    <div class="events-card events-stats-card">
+                        <span class="events-counter-value" data-target="6200">0</span>
+                        <p>Participants</p>
+                    </div>
+                    <div class="events-card events-stats-card">
+                        <span class="events-counter-value" data-target="48">0</span>
+                        <p>Schools</p>
+                    </div>
+                    <div class="events-card events-stats-card">
+                        <span class="events-counter-value" data-target="24">0</span>
+                        <p>Colleges</p>
+                    </div>
+                    <div class="events-card events-stats-card">
+                        <span class="events-counter-value" data-target="95">0</span>
+                        <p>Mentors</p>
+                    </div>
+                    <div class="events-card events-stats-card">
+                        <span class="events-counter-value" data-target="140">0</span>
+                        <p>Volunteers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-testimonials" aria-labelledby="eventsTestimonialsTitle">
+            <div class="events-container">
+                <div class="events-section-heading">
+                    <p class="events-eyebrow">Voices from the community</p>
+                    <h2 id="eventsTestimonialsTitle">Students describe the experience in their own words.</h2>
+                </div>
+                <div class="events-slider">
+                    <article class="events-card events-testimonial-card events-testimonial-active">
+                        <img class="events-testimonial-image" src="../../images/events/event1.png" alt="Student testimonial">
+                        <div>
+                            <p>“The event felt like a launchpad for my ideas. I left feeling capable, connected and inspired.”</p>
+                            <h3>Diya R.</h3>
+                            <span>Student participant</span>
+                        </div>
+                    </article>
+                    <article class="events-card events-testimonial-card">
+                        <img class="events-testimonial-image" src="../../images/events/event2.png" alt="Parent testimonial">
+                        <div>
+                            <p>“The experience was thoughtful, well-led and genuinely meaningful for our child.”</p>
+                            <h3>Rakesh M.</h3>
+                            <span>Parent</span>
+                        </div>
+                    </article>
+                    <article class="events-card events-testimonial-card">
+                        <img class="events-testimonial-image" src="../../images/events/event3.png" alt="Teacher testimonial">
+                        <div>
+                            <p>“The workshops blended learning and creativity beautifully. The atmosphere was outstanding.”</p>
+                            <h3>Shruti K.</h3>
+                            <span>Teacher</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-faq" aria-labelledby="eventsFaqTitle">
+            <div class="events-container">
+                <div class="events-section-heading">
+                    <p class="events-eyebrow">Frequently asked questions</p>
+                    <h2 id="eventsFaqTitle">Everything you need to know before you join.</h2>
+                </div>
+                <div class="events-faq-list">
+                    <article class="events-card events-faq-item">
+                        <button class="events-faq-question" type="button" aria-expanded="false">
+                            <span>Who can attend Yuvalay events?</span>
+                            <span class="events-faq-icon">+</span>
+                        </button>
+                        <div class="events-faq-answer">
+                            <p>Our events are open to students, educators, parents, mentors, volunteers and partner organizations.</p>
+                        </div>
+                    </article>
+                    <article class="events-card events-faq-item">
+                        <button class="events-faq-question" type="button" aria-expanded="false">
+                            <span>Do I need prior experience?</span>
+                            <span class="events-faq-icon">+</span>
+                        </button>
+                        <div class="events-faq-answer">
+                            <p>No. Many events are designed for beginners and welcomed with guided support from facilitators.</p>
+                        </div>
+                    </article>
+                    <article class="events-card events-faq-item">
+                        <button class="events-faq-question" type="button" aria-expanded="false">
+                            <span>How do I register?</span>
+                            <span class="events-faq-icon">+</span>
+                        </button>
+                        <div class="events-faq-answer">
+                            <p>You can register directly through the event page or contact our team for assistance.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-partners" aria-labelledby="eventsPartnersTitle">
+            <div class="events-container">
+                <div class="events-section-heading">
+                    <p class="events-eyebrow">Sponsors & partners</p>
+                    <h2 id="eventsPartnersTitle">Trusted by educators, innovators and community organizations.</h2>
+                </div>
+                <div class="events-marquee" aria-label="Partner logos">
+                    <div class="events-marquee-track">
+                        <span>FutureLab</span>
+                        <span>Nova Design</span>
+                        <span>GreenGrid</span>
+                        <span>BuildWorks</span>
+                        <span>CodeCraft</span>
+                        <span>Studio North</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-cta" aria-labelledby="eventsCtaTitle">
+            <div class="events-container">
+                <div class="events-card events-cta-card">
+                    <div>
+                        <p class="events-eyebrow">Join the next experience</p>
+                        <h2 id="eventsCtaTitle">Be part of the next chapter of innovation.</h2>
+                        <p>Register for an upcoming event, volunteer with the team, or simply connect with us to learn more.</p>
+                    </div>
+                    <div class="events-cta-actions">
+                        <a class="events-register events-register-primary" href="#">Register</a>
+                        <a class="events-register events-register-secondary" href="#">Volunteer</a>
+                        <a class="events-register events-register-secondary" href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <img src="../../images/logo.png" class="footer-logo" alt="Yuvalay">
+                <p>Empowering youth through education, innovation, leadership and community service.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../about/about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="../about/gallery.html">Gallery</a></li>
+                    <li><a href="../support/support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p>Email : info@yuvalay.org</p>
+                <p>Phone : +91 98765 43210</p>
+                <p>Vadodara, Gujarat</p>
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">✦</a>
+                    <a href="#" aria-label="Facebook">◌</a>
+                    <a href="#" aria-label="LinkedIn">◍</a>
+                    <a href="#" aria-label="YouTube">▶</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Yuvalay. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../components/navbar.js"></script>
+    <script src="../home/live-notification.js"></script>
+    <script src="events.js"></script>
+</body>
+</html>
