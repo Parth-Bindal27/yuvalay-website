@@ -3,9 +3,14 @@
 =========================== */
 
 .live-notification{
+    position:absolute;
+    top:72px;
+    left:50%;
+    transform:translateX(-50%);
 
-    width:90%;
+    width:min(92%,1200px);
     max-width:1200px;
+    z-index:50;
 
     min-height:56px;
 

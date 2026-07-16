@@ -1,118 +1,265 @@
-const heroSlides = Array.from(document.querySelectorAll('.events-hero-slide'));
-const heroDots = Array.from(document.querySelectorAll('.events-hero-dot'));
-const heroTitle = document.getElementById('eventsHeroPanelTitle');
-const heroCopy = document.getElementById('eventsHeroPanelCopy');
-let heroIndex = 0;
-let heroTimer;
+/* ==========================================================
+                    HERO SLIDER
+========================================================== */
 
-const heroCopyMap = [
-    {
-        title: 'Build, Learn, Lead',
-        copy: 'A hands-on experience for young innovators and future makers.'
-    },
-    {
-        title: 'Where Ideas Become Prototypes',
-        copy: 'Design immersive workshops that turn curiosity into confidence and capability.'
-    },
-    {
-        title: 'Celebrate Community and Craft',
-        copy: 'Connect with mentors, peers and creators in unforgettable gatherings.'
+const heroSlides = document.querySelectorAll(".hero-slide");
+
+let currentSlide = 0;
+
+function showSlide(index){
+
+    heroSlides.forEach(slide=>{
+
+        slide.classList.remove("active");
+
+    });
+
+    heroSlides[index].classList.add("active");
+
+}
+
+function nextSlide(){
+
+    currentSlide++;
+
+    if(currentSlide>=heroSlides.length){
+
+        currentSlide=0;
+
     }
-];
 
-function setHeroSlide(index) {
-    heroSlides.forEach((slide, slideIndex) => {
-        slide.classList.toggle('events-hero-slide-active', slideIndex === index);
-    });
-    heroDots.forEach((dot, dotIndex) => {
-        dot.classList.toggle('events-hero-dot-active', dotIndex === index);
-    });
-    if (heroTitle) heroTitle.textContent = heroCopyMap[index]?.title || heroCopyMap[0].title;
-    if (heroCopy) heroCopy.textContent = heroCopyMap[index]?.copy || heroCopyMap[0].copy;
+    showSlide(currentSlide);
+
 }
 
-function startHeroSlider() {
-    if (heroSlides.length <= 1) return;
-    heroTimer = window.setInterval(() => {
-        heroIndex = (heroIndex + 1) % heroSlides.length;
-        setHeroSlide(heroIndex);
-    }, 5000);
+if(heroSlides.length){
+
+    setInterval(nextSlide,5000);
+
 }
 
-heroDots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        heroIndex = index;
-        setHeroSlide(heroIndex);
-        window.clearInterval(heroTimer);
-        startHeroSlider();
-    });
-});
 
-setHeroSlide(heroIndex);
-startHeroSlider();
+/* ==========================================================
+                    COUNTDOWN
+========================================================== */
 
-const filterButtons = Array.from(document.querySelectorAll('.events-filter-pill'));
-const eventCards = Array.from(document.querySelectorAll('.events-upcoming-card'));
+const eventDate = new Date("August 15, 2026 10:00:00").getTime();
 
-filterButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-        const category = button.getAttribute('data-category') || 'all';
-        filterButtons.forEach((item) => item.classList.toggle('events-filter-active', item === button));
-        eventCards.forEach((card) => {
-            const matches = category === 'all' || card.getAttribute('data-category') === category;
-            card.style.display = matches ? 'block' : 'none';
+const days = document.getElementById("days");
+const hours = document.getElementById("hours");
+const minutes = document.getElementById("minutes");
+const seconds = document.getElementById("seconds");
+
+function updateCountdown(){
+
+    const now = new Date().getTime();
+
+    const distance = eventDate - now;
+
+    if(distance<=0){
+
+        if(days) days.innerHTML="00";
+        if(hours) hours.innerHTML="00";
+        if(minutes) minutes.innerHTML="00";
+        if(seconds) seconds.innerHTML="00";
+
+        return;
+
+    }
+
+    const d = Math.floor(distance/(1000*60*60*24));
+
+    const h = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+    const m = Math.floor((distance%(1000*60*60))/(1000*60));
+
+    const s = Math.floor((distance%(1000*60))/1000);
+
+    if(days) days.innerHTML=d.toString().padStart(2,"0");
+
+    if(hours) hours.innerHTML=h.toString().padStart(2,"0");
+
+    if(minutes) minutes.innerHTML=m.toString().padStart(2,"0");
+
+    if(seconds) seconds.innerHTML=s.toString().padStart(2,"0");
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+
+/* ==========================================================
+                    EVENT FILTER
+========================================================== */
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+const eventCards = document.querySelectorAll(".event-card");
+
+filterButtons.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        filterButtons.forEach(btn=>{
+
+            btn.classList.remove("active");
+
         });
-    });
-});
 
-const counters = Array.from(document.querySelectorAll('.events-counter-value'));
-const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const counter = entry.target;
-        const target = Number(counter.getAttribute('data-target') || 0);
-        let current = 0;
-        const step = Math.max(1, Math.floor(target / 40));
-        const interval = window.setInterval(() => {
-            current += step;
-            if (current >= target) {
-                counter.textContent = target;
-                window.clearInterval(interval);
-            } else {
-                counter.textContent = current;
+        button.classList.add("active");
+
+        const filter = button.textContent.trim().toLowerCase();
+
+        eventCards.forEach(card=>{
+
+            if(filter==="all"){
+
+                card.style.display="block";
+
+                return;
+
             }
-        }, 24);
-        counterObserver.unobserve(counter);
-    });
-}, { threshold: 0.6 });
 
-counters.forEach((counter) => counterObserver.observe(counter));
+            const badge = card.querySelector(".event-badge");
 
-const faqItems = Array.from(document.querySelectorAll('.events-faq-item'));
-faqItems.forEach((item) => {
-    const button = item.querySelector('.events-faq-question');
-    if (!button) return;
-    button.addEventListener('click', () => {
-        const isOpen = item.classList.contains('is-open');
-        faqItems.forEach((faqItem) => {
-            faqItem.classList.remove('is-open');
-            const faqButton = faqItem.querySelector('.events-faq-question');
-            if (faqButton) faqButton.setAttribute('aria-expanded', 'false');
+            if(!badge){
+
+                card.style.display="block";
+
+                return;
+
+            }
+
+            const category = badge.textContent.trim().toLowerCase();
+
+            if(category===filter){
+
+                card.style.display="block";
+
+            }
+
+            else{
+
+                card.style.display="none";
+
+            }
+
         });
-        if (!isOpen) {
-            item.classList.add('is-open');
-            button.setAttribute('aria-expanded', 'true');
-        }
+
     });
+
 });
 
-const testimonials = Array.from(document.querySelectorAll('.events-testimonial-card'));
-let testimonialIndex = 0;
-if (testimonials.length) {
-    setInterval(() => {
-        testimonials.forEach((item, index) => {
-            item.classList.toggle('events-testimonial-active', index === testimonialIndex);
+
+/* ==========================================================
+                    FAQ
+========================================================== */
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item=>{
+
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click",()=>{
+
+        const isOpen = item.classList.contains("active");
+
+        faqItems.forEach(faq=>{
+
+            faq.classList.remove("active");
+
         });
-        testimonialIndex = (testimonialIndex + 1) % testimonials.length;
-    }, 5000);
-}
+
+        if(!isOpen){
+
+            item.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+/* ==========================================================
+                    SCROLL REVEAL
+========================================================== */
+
+const revealElements = document.querySelectorAll(
+
+    ".event-card, .impact-card, .speaker-card, .timeline-item, .testimonial-card, .featured-event-wrapper"
+
+);
+
+const observer = new IntersectionObserver(entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.style.opacity="1";
+
+            entry.target.style.transform="translateY(0)";
+
+        }
+
+    });
+
+},{
+
+    threshold:0.15
+
+});
+
+revealElements.forEach(element=>{
+
+    element.style.opacity="0";
+
+    element.style.transform="translateY(40px)";
+
+    element.style.transition=".8s ease";
+
+    observer.observe(element);
+
+});
+
+
+/* ==========================================================
+                GALLERY HOVER (OPTIONAL)
+========================================================== */
+
+const galleryImages = document.querySelectorAll(".gallery-grid img");
+
+galleryImages.forEach(image=>{
+
+    image.addEventListener("mouseenter",()=>{
+
+        image.style.transform="scale(1.05)";
+
+    });
+
+    image.addEventListener("mouseleave",()=>{
+
+        image.style.transform="scale(1)";
+
+    });
+
+});
+
+
+/* ==========================================================
+                    PARALLAX HERO
+========================================================== */
+
+window.addEventListener("scroll",()=>{
+
+    const hero = document.querySelector(".events-hero");
+
+    if(!hero) return;
+
+    hero.style.backgroundPositionY = `${window.scrollY * 0.4}px`;
+
+});
