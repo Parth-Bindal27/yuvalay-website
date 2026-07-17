@@ -126,3 +126,156 @@ function closeMobileMenu() {
     });
 
 }
+
+// ===============================
+// AUTHENTICATION NAVBAR
+// ===============================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const authArea = document.getElementById("authArea");
+
+    if (!authArea) return;
+
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    const user = JSON.parse(localStorage.getItem("yuvalayaUser"));
+
+    // ===============================
+    // USER NOT LOGGED IN
+    // ===============================
+
+    if (isLoggedIn !== "true" || !user) {
+
+        authArea.innerHTML = `
+
+            <a href="Authentication/login.html" class="login-btn">
+
+                Login
+
+            </a>
+
+            <a href="Authentication/signup.html" class="signup-btn">
+
+                Sign Up
+
+            </a>
+
+        `;
+
+        return;
+
+    }
+
+    // ===============================
+    // USER LOGGED IN
+    // ===============================
+
+    authArea.innerHTML = `
+
+        <div class="profile-menu">
+
+            <button class="profile-btn" id="profileBtn">
+
+                <div class="profile-avatar">
+
+                    ${user.name.charAt(0).toUpperCase()}
+
+                </div>
+
+                <span class="profile-name">
+
+                    ${user.name.split(" ")[0]}
+
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="profile-dropdown" id="profileDropdown">
+
+                <div class="profile-info">
+
+                    <strong>${user.name}</strong>
+
+                    <span>${user.email}</span>
+
+                </div>
+
+                <hr>
+
+                <a href="Authentication/dashboard.html">
+
+                    <i class="ri-dashboard-line"></i>
+
+                    Dashboard
+
+                </a>
+
+                <a href="Authentication/profile.html">
+
+                    <i class="ri-user-line"></i>
+
+                    My Profile
+
+                </a>
+
+                <a href="#" id="logoutBtn">
+
+                    <i class="ri-logout-box-r-line"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+    `;
+
+    // ===============================
+    // TOGGLE PROFILE MENU
+    // ===============================
+
+    const profileBtn = document.getElementById("profileBtn");
+
+    const profileDropdown = document.getElementById("profileDropdown");
+
+    profileBtn.addEventListener("click", function (e) {
+
+        e.stopPropagation();
+
+        profileDropdown.classList.toggle("show");
+
+    });
+
+    // Close on outside click
+
+    document.addEventListener("click", function () {
+
+        profileDropdown.classList.remove("show");
+
+    });
+
+    profileDropdown.addEventListener("click", function (e) {
+
+        e.stopPropagation();
+
+    });
+
+    // ===============================
+    // LOGOUT
+    // ===============================
+
+    document.getElementById("logoutBtn").addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        localStorage.removeItem("isLoggedIn");
+
+        window.location.href = "Authentication/login.html";
+
+    });
+
+});

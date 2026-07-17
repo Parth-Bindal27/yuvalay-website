@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Profile | Yuvalaya</title>
+
+<link rel="stylesheet" href="../components/navbar.css">
+<link rel="stylesheet" href="../components/footer.css">
+<link rel="stylesheet" href="../webpages/home/live-notification.css">
+
+<link rel="stylesheet" href="profile.css">
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<section class="profile-section">
+
+<div class="profile-container">
+
+<h1>My Profile</h1>
+
+<div class="profile-grid">
+
+<div class="profile-left">
+
+<img src="../images/default-user.png" id="profileImage">
+
+<h2 id="userName">Loading...</h2>
+
+<p id="userRole"></p>
+
+<button>Edit Photo</button>
+
+</div>
+
+<div class="profile-right">
+
+<div class="info-box">
+
+<h3>Personal Information</h3>
+
+<div class="info">
+
+<label>Full Name</label>
+
+<p id="profileName"></p>
+
+</div>
+
+<div class="info">
+
+<label>Email</label>
+
+<p id="profileEmail"></p>
+
+</div>
+
+<div class="info">
+
+<label>Phone</label>
+
+<p id="profilePhone"></p>
+
+</div>
+
+<div class="info">
+
+<label>Role</label>
+
+<p id="profileRole"></p>
+
+</div>
+
+<div class="info">
+
+<label>Member Since</label>
+
+<p id="profileJoined"></p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="about-card">
+
+<h3>About Me</h3>
+
+<p>
+Passionate about innovation, community development and technology.
+</p>
+
+</div>
+
+<div class="button-group">
+
+<a href="../index.html" class="home-btn">
+Home
+</a>
+
+<button onclick="logout()" class="logout-btn">
+Logout
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../components/navbar-loader.js"></script>
+<script src="../components/footer-loader.js"></script>
+<script src="../components/navbar.js"></script>
+
+<script src="profile.js"></script>
+
+</body>
+
+</html>

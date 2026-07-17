@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Yuvalaya</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="../webpages/home/live-notification.css">
+    <link rel="stylesheet" href="../components/footer.css">
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- ===========================
+            HERO
+    ============================ -->
+
+    <section class="dashboard-hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Welcome Back,
+                <span id="userName">Member</span> 👋
+            </h1>
+
+            <p>
+
+                Every contribution you make helps us inspire innovators,
+                empower students, and strengthen our community.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="profile-progress">
+
+    <div class="progress-card">
+
+        <div>
+
+            <h3>Complete Your Profile</h3>
+
+            <p>
+                Add profile photo and address to unlock all features.
+            </p>
+
+        </div>
+
+        <div class="progress-circle">
+
+            <span>80%</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ===========================
+            STATS
+    ============================ -->
+
+    <section class="stats-section">
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <i class="ri-calendar-event-line"></i>
+
+                <h2>06</h2>
+
+                <p>Events Joined</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="ri-heart-3-line"></i>
+
+                <h2>₹500</h2>
+
+                <p>Total Donations</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="ri-time-line"></i>
+
+                <h2>24 hrs</h2>
+
+                <p>Volunteer Hours</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="ri-award-line"></i>
+
+                <h2>03</h2>
+
+                <p>Certificates</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+            QUICK ACTIONS
+    ============================ -->
+
+    <section class="quick-actions">
+
+        <h2>
+
+            Quick Actions
+
+        </h2>
+
+        <div class="action-grid">
+
+            <a href="../events.html" class="action-card">
+
+                <i class="ri-add-circle-line"></i>
+
+                <h3>
+
+                    Register Event
+
+                </h3>
+
+            </a>
+
+            <a href="../donate.html" class="action-card">
+
+                <i class="ri-hand-heart-line"></i>
+
+                <h3>
+
+                    Donate Now
+
+                </h3>
+
+            </a>
+
+            <a href="profile.html" class="action-card">
+
+                <i class="ri-user-settings-line"></i>
+
+                <h3>
+
+                    Edit Profile
+
+                </h3>
+
+            </a>
+
+            <a href="#" class="action-card">
+
+                <i class="ri-award-line"></i>
+
+                <h3>
+
+                    Certificates
+
+                </h3>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+        UPCOMING EVENTS
+    ============================ -->
+
+    <section class="dashboard-events">
+
+        <div class="section-heading">
+
+            <h2>
+
+                Upcoming Events
+
+            </h2>
+
+            <a href="../events.html">
+
+                View All
+
+            </a>
+
+        </div>
+
+        <div class="event-grid">
+
+            <div class="event-card">
+
+                <img src="../assets/events/tree.jpg" alt="">
+
+                <div class="event-info">
+
+                    <h3>
+
+                        Tree Plantation Drive
+
+                    </h3>
+
+                    <p>
+
+                        12 August • Vadodara
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="event-card">
+
+                <img src="../assets/events/iot.jpg" alt="">
+
+                <div class="event-info">
+
+                    <h3>
+
+                        IoT Makers Workshop
+
+                    </h3>
+
+                    <p>
+
+                        18 August • Makerspace
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="event-card">
+
+                <img src="../assets/events/blood.jpg" alt="">
+
+                <div class="event-info">
+
+                    <h3>
+
+                        Blood Donation Camp
+
+                    </h3>
+
+                    <p>
+
+                        25 August • Community Hall
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+        RECENT ACTIVITY
+    ============================ -->
+
+    <section class="activity-section">
+
+        <h2>
+
+            Recent Activity
+
+        </h2>
+
+        <div class="activity-list">
+
+            <div class="activity-item">
+
+                <i class="ri-checkbox-circle-fill"></i>
+
+                <div>
+
+                    <h4>
+
+                        Registered for IoT Workshop
+
+                    </h4>
+
+                    <span>
+
+                        2 Days Ago
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="ri-checkbox-circle-fill"></i>
+
+                <div>
+
+                    <h4>
+
+                        Donated ₹500
+
+                    </h4>
+
+                    <span>
+
+                        5 Days Ago
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="ri-checkbox-circle-fill"></i>
+
+                <div>
+
+                    <h4>
+
+                        Certificate Awarded
+
+                    </h4>
+
+                    <span>
+
+                        Last Week
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+            BADGES
+    ============================ -->
+
+    <section class="badges-section">
+
+        <h2>
+
+            Achievements
+
+        </h2>
+
+        <div class="badge-grid">
+
+            <div class="badge-card">
+
+                🏆
+
+                <h3>
+
+                    Active Volunteer
+
+                </h3>
+
+            </div>
+
+            <div class="badge-card">
+
+                🌱
+
+                <h3>
+
+                    Green Warrior
+
+                </h3>
+
+            </div>
+
+            <div class="badge-card">
+
+                ⭐
+
+                <h3>
+
+                    Community Builder
+
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JS -->
+    <script src="../components/navbar-loader.js"></script>
+    <script src="../components/footer-loader.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
