@@ -33,8 +33,9 @@ body{
 
     display:flex;
     align-items:center;
+    justify-content:space-between;
 
-    padding:0 40px;
+    padding:0 22px;
 
     background:rgba(255,255,255,.68);
 
@@ -178,13 +179,23 @@ header{
 
     display:none;
 
-    font-size:32px;
+    width:48px;
+
+    height:48px;
+
+    justify-content:center;
+
+    align-items:center;
 
     cursor:pointer;
 
+    font-size:30px;
+
     color:#1d1d1f;
 
-    transition:.3s;
+    transition:.3s ease;
+
+    line-height:1;
 
 }
 
@@ -218,13 +229,24 @@ header{
     }
 
     .hamburger{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        font-size:34px;
-        cursor:pointer;
-        z-index:10002;
-    }
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:48px;
+
+    height:48px;
+
+    font-size:32px;
+
+    flex-shrink:0;
+
+    z-index:10002;
+
+}
 
     /* Mobile Menu */
     .nav-center{
